@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.headerDiv {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 100vw;
+    height: 10vw;
+}
+
+.ricolaLogo {
+    max-width: 200px;
+    height: auto;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    align-self: center;
+}
+
+.hamburgerIcon {
+    max-width: 50px;
+    height: auto;
+    grid-column-start: 7;
+    align-self: center;
+}
