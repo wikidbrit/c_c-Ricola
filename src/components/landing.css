@@ -1,18 +1,52 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
-.headerDiv {
+:root {
+    --green: #005245;
+    --yellow: #ffcc00;
+    --grey: #111111;
+}
+
+.headerDiv, .hero-bg, .wrapper, .subtext {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     width: 100vw;
-    height: 10vw;
+}
+
+.headerDiv {
+    height: 5vh;
+}
+
+.hero-bg {
+    height:80vh;
+}
+
+.subtext {
+    height:15vh;
+}
+
+.subHeader {
+    grid-column: 3/7;
+    text-align: center;
+    align-self: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.subParagraph{
+    grid-column: 3/7;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: var(--grey)
 }
 
 .ricolaLogo {
-    max-width: 200px;
+    max-width: 150px;
     height: auto;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -21,8 +55,21 @@
 }
 
 .hamburgerIcon {
-    max-width: 50px;
+    max-width: 35px;
     height: auto;
     grid-column-start: 7;
     align-self: center;
+}
+
+.ground {
+    grid-row: 2/3;
+    grid-column: 3/7;
+}
+.ground img{
+    width:100%;
+}
+
+.wrapper {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,204,0,1) 50%);
+    clip-path: polygon(1% 1%, 99% 0, 98% 99%, 2% 99%);
 }
