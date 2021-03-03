@@ -9,12 +9,17 @@ import Factory from './factory.png';
 import Farm from './farm.png'
 import Village from './village.png'
 import PlayButton from './playbutton.js'
+import Toon from './Rasmus.png'
+
+
+
 export default function Hero() {
     return (
         <div className ="hero-bg">
             <div className="wrapper">   
 
                 <img src={Ground} alt="Ricola world ground" className='ground'/>
+                <img src={Toon} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus'/>
                 <img src={Village} alt="A rending of a small town" className='village'/>
                 <img src={Farm} alt="A rendering of a farm" className='farm'/>
                 <img src={Factory} alt="A rendering of the Ricola factory" className='factory'/>
@@ -23,6 +28,11 @@ export default function Hero() {
                 <img src={LeftCloudBig} alt="A cloud in the sky" className="LeftCloudBig"/>
                 <img src= {LeftCloudSmall} alt="A cloud in the sky" className="LeftCloudSmall"/>
                 <PlayButton />
+                <div className="accentText">
+                    <p className="accentHeader">EXPLORE THE <br></br>RICOLA WORLD</p>
+                    <p className="accentUnder">LEARN MORE ABOUT <br></br>OUR SUSTAINABLE FOOTSTEPS...</p>
+                    <div className="horizontalRule"></div>
+                </div>
             </div>
 
         </div>
