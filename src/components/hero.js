@@ -28,38 +28,47 @@ import HeroButton from './heroButton.js';
 //       }
 //   }`;
 
-const query = `
-query{
-    
-      }
-  }`;
-
+let query = 
+        `query {
+            categoriesCollection(limit: 20)
+            {
+            items
+                {
+              categoryNumber
+                categoryName
+                }
+            } 
+        }`
+;
 
 function Hero() {
-    // let [data, setData] = useState(null);
 
-    // useEffect(() => {
-    //     window
-    // .fetch(
-    // `https://graphql.contentful.com/content/v1/spaces/hr9iqsg7g59t?access_token=Pgo--ibSOmLEpNQiOr6dOeMUoxTsiBXzFe1DTJ0gk_k`,
-    // {
-    // method: "POST",
-    // headers: {
-    //     "Content-Type": "application/json",
-    // },
-    // body: JSON.stringify({ query}),
-    // }
-    // )
-    // .then(response => response.json())
-    // .then((json) => setData(json.data));    
-    // }, [])
+    let [data, setData] = useState(null);
 
-    // if (!data) return <span>Loading...</span>
+    useEffect(() => {
+        window
+    .fetch(
+    `https://graphql.contentful.com/content/v1/spaces/hr9iqsg7g59t?access_token=Pgo--ibSOmLEpNQiOr6dOeMUoxTsiBXzFe1DTJ0gk_k`,
+    {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query }),
+    }
+    )
+    .then(response => response.json())
+    .then((json) => setData(json.data));    
+    }, [])
+
+    if (!data) return <span>Loading...</span>
+
 
     return (
         <div className ="hero-bg">
-            <div className="wrapper">   
-                <HeroButton />
+            <div className="wrapper">
+                
+                <HeroButton {...data.categoriesCollection.items} />
 
                 <img src={Ground} alt="Ricola world ground" className='ground'/>
                 <img src={Toon} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus'/>
