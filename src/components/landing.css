@@ -154,6 +154,7 @@
     width:75%;
     align-self: center;
     transform: translate(13%, 3%);
+    transition: 100ms ease-in-out;
 }
 
 .Mountain:hover {
@@ -177,6 +178,7 @@
     justify-self: center;
     align-self: center;
     transform: translate(-16%, -44%);
+    transition: 100ms ease-in-out;
 }
 
 .factory:hover {
@@ -200,6 +202,7 @@
     justify-self: right;
     align-self: center;
     transform: translate(-7%, 29.5%);
+    transition: 100ms ease-in-out;
 }
 
 .farm:hover {
@@ -223,6 +226,7 @@
     justify-self: center;
     align-self: center;
     transform: translate(25%, 110%);
+    transition: 100ms ease-in-out;
 }
 
 .village:hover {
@@ -235,6 +239,9 @@
         drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
         contrast(150%);
 }
+
+/* PLAY BUTTON */
+
 .PlayButton {
     height: 75px;
     width: 75px;
@@ -246,9 +253,76 @@
     transform: translateY(100%);
     display: flex;
     z-index: 0;
+    transition: 300ms ease-in-out;
 }
 
 .PlaySymbol {
     margin: 0 auto;
-    transform: translateX(5px);
+    transform: translate(3px, 22.5px);
+    height: 40%;
+    width: auto;
 }
+
+.PlayButton:hover {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(251, 247, 0, 0.649))
+        drop-shadow(2px 2px 1px rgba(251, 247, 0, 0.649))
+        drop-shadow(-2px -2px 1px rgba(251, 247, 0, 0.649))
+        contrast(120%);
+    filter: drop-shadow(0px 0px 7px rgba(251, 247, 0, 0.649))
+        drop-shadow(2px 2px 1px rgba(251, 247, 0, 0.649))
+        drop-shadow(-2px -2px 1px rgba(251, 247, 0, 0.649))
+        contrast(120%);
+}
+
+/* RASMUS */
+
+.rasmus {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    max-width: 120px;
+    justify-self: center;
+    align-self: flex-end;
+    transform: translateY(-20%);
+    transition: 500ms ease-in-out;
+}
+
+.rasmus:hover {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.649))
+        drop-shadow(2px 2px 1px rgba(255, 255, 255, 0.649))
+        drop-shadow(-2px -2px 1px rgba(255, 255, 255, 0.649));
+
+    filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.649))
+        drop-shadow(2px 2px 1px rgba(255, 255, 255, 0.649))
+        drop-shadow(-2px -2px 1px rgba(255, 255, 255, 0.649));
+
+}
+
+/* Accent Text */
+
+.accentText {
+    grid-column: 7/9;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: flex-end;
+    transform: translate(30%, -35%);
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 250px;
+    font-size: 18px;
+}
+
+.accentHeader {
+    font-weight: 600;
+}
+
+.accentUnder {
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.horizontalRule {
+    width: 50px;
+    height: 2px;
+    background-color: var(--green);
+    margin-top: 20px;
+}
+
