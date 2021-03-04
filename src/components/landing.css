@@ -335,6 +335,8 @@
     height:30px;
     grid-column: 2/3;
     display:flex;
+    grid-row: 1/2;
+    justify-self: center;
 }
 
 .plusIcon{
