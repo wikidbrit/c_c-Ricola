@@ -7,6 +7,7 @@
     --green: #005245;
     --yellow: #ffcc00;
     --grey: #111111;
+    --lightYellow: #EAE0B7;
 }
 
 .headerDiv, .hero-bg, .wrapper, .subtext {
@@ -246,7 +247,7 @@
     height: 75px;
     width: 75px;
     border-radius: 50px;
-    background-color: #EAE0B7;
+    background-color: var(--lightYellow);
     grid-column: 2/3;
     grid-row: 1/2;
     justify-self: center;
@@ -326,3 +327,17 @@
     margin-top: 20px;
 }
 
+/* BUTTONS */
+.HeroButton {
+    width:30px;
+    background-color:var(--green);
+    border-radius: 50px;
+    height:30px;
+    grid-column: 2/3;
+    display:flex;
+}
+
+.plusIcon{
+    width:40%;
+    margin: 0 auto;
+}

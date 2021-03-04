@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './landing.css';
 import Ground from './ground.png';
 import RightCloud from './cloud3.png';
@@ -6,17 +6,60 @@ import LeftCloudBig from './cloud2.png';
 import LeftCloudSmall from './cloud1.png';
 import Mountain from './mountain.png';
 import Factory from './factory.png';
-import Farm from './farm.png'
-import Village from './village.png'
-import PlayButton from './playbutton.js'
-import Toon from './Rasmus.png'
+import Farm from './farm.png';
+import Village from './village.png';
+import PlayButton from './playbutton.js';
+import Toon from './Rasmus.png';
+import HeroButton from './heroButton.js';
 
 
+// const query = `
+// query{
+//     footstep
+//       (id:"3bgRzGQT5iyeUbxEbI2sRA")
+//       {
+//         h1
+//         h2
+//         cardImage {
+//           title
+//           description
+//           url
+//         }
+//       }
+//   }`;
 
-export default function Hero() {
+const query = `
+query{
+    
+      }
+  }`;
+
+
+function Hero() {
+    // let [data, setData] = useState(null);
+
+    // useEffect(() => {
+    //     window
+    // .fetch(
+    // `https://graphql.contentful.com/content/v1/spaces/hr9iqsg7g59t?access_token=Pgo--ibSOmLEpNQiOr6dOeMUoxTsiBXzFe1DTJ0gk_k`,
+    // {
+    // method: "POST",
+    // headers: {
+    //     "Content-Type": "application/json",
+    // },
+    // body: JSON.stringify({ query}),
+    // }
+    // )
+    // .then(response => response.json())
+    // .then((json) => setData(json.data));    
+    // }, [])
+
+    // if (!data) return <span>Loading...</span>
+
     return (
         <div className ="hero-bg">
             <div className="wrapper">   
+                <HeroButton />
 
                 <img src={Ground} alt="Ricola world ground" className='ground'/>
                 <img src={Toon} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus'/>
@@ -33,8 +76,15 @@ export default function Hero() {
                     <p className="accentUnder">LEARN MORE ABOUT <br></br>OUR SUSTAINABLE FOOTSTEPS...</p>
                     <div className="horizontalRule"></div>
                 </div>
+                
             </div>
+
+
+            
 
         </div>
     )
 }
+
+
+export default Hero;
