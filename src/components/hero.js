@@ -34,8 +34,8 @@ const query =
             {
             items
                 {
-                categoryNumber
-                categoryName
+                number
+                name
                 }
             } 
         }`
@@ -62,13 +62,19 @@ function Hero() {
     }, [])
 
     if (!data) return <span>Loading...</span>
-
+    const buttonData = data.categoriesCollection.items;
 
     return (
         <div className ="hero-bg">
             <div className="wrapper">
-                
-                <HeroButton buttonData={data} />
+                {buttonData.map((item) => (
+                     <HeroButton 
+                     key={item.number}
+                     category={item.name}
+              
+                    />
+                ))}
+               
                 
                 <img src={Ground} alt="Ricola world ground" className='ground'/>
                 <img src={Toon} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus'/>

@@ -3,13 +3,10 @@ import './landing.css';
 import plus from './plus.svg';
 
 
-const heroButton = (props) => {
-
-console.log(props.buttonData)
+const heroButton = ({category}) => {
 
     return (
-        <div className="HeroButton">
-            <p>{props.buttonData.categoryName}</p>
+        <div className="HeroButton" id={category}>
             <img className="plusIcon" src={plus} alt="plus icon"/>
         </div>
     );
