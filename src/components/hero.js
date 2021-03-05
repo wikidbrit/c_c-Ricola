@@ -28,13 +28,13 @@ import HeroButton from './heroButton.js';
 //       }
 //   }`;
 
-let query = 
+const query = 
         `query {
             categoriesCollection(limit: 20)
             {
             items
                 {
-              categoryNumber
+                categoryNumber
                 categoryName
                 }
             } 
@@ -68,8 +68,8 @@ function Hero() {
         <div className ="hero-bg">
             <div className="wrapper">
                 
-                <HeroButton {...data.categoriesCollection.items} />
-
+                <HeroButton buttonData={data} />
+                
                 <img src={Ground} alt="Ricola world ground" className='ground'/>
                 <img src={Toon} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus'/>
                 <img src={Village} alt="A rending of a small town" className='village'/>
