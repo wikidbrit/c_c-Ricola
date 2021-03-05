@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+
+@font-face{
+    font-family: "Frutiger";
+  src: url("Frutiger-Next.ttf") format("ttf"),
+}
+
 :root {
     --green: #005245;
     --yellow: #ffcc00;
@@ -306,7 +312,7 @@
     justify-self: center;
     align-self: flex-end;
     transform: translate(30%, -35%);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Frutiger;
     max-width: 250px;
     font-size: 18px;
 }
@@ -342,4 +348,28 @@
 .plusIcon{
     width:40%;
     margin: 0 auto;
+}
+
+#Nature{
+    align-self:center;
+    transform: translateY(-100%);
+}
+
+#People{
+    align-self:center;
+    transform: translateY(300%);
+}
+
+
+#Business{
+    align-self:center;
+    grid-column: 7/9;
+    transform: translateY(150%);
+}
+
+#x-Ricola{
+    align-self:center;
+    grid-column: 7/9;
+    
+    transform: translateY(-250%);
 }
