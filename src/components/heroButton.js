@@ -1,6 +1,6 @@
 import React from 'react';
 import './landing.css';
-import plus from './plus.svg';
+import plus from '../assets/plus.svg';
 
 
 const heroButton = ({category}) => {
