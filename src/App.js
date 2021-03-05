@@ -74,8 +74,8 @@ function App() {
       <Hero buttonData={buttonData}/>
       <SubText />
       <CardSection 
-        h1={cardsData.h1}
-        h2={cardsData.h2}
+        cardsData={cardsData}
+
       />
     </React.Fragment>
   );

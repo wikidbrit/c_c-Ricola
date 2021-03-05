@@ -3,12 +3,12 @@ import CardHeader from './cardHeader.js';
 import CardContainer from './cardContainer.js';
 
 
-const CardSection = () => {
+const CardSection = ({cardsData}) => {
 
     return (
         <div className="cardSection">
             <CardHeader />
-            <CardContainer />
+            <CardContainer cardsData={cardsData}/>
         </div>
     );
 }
