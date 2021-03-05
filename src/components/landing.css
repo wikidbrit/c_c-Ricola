@@ -6,7 +6,7 @@
 
 @font-face{
     font-family: "Frutiger";
-  src: url("Frutiger-Next.ttf") format("ttf"),
+  src: url("../assets/Frutiger-Next.ttf") format("ttf"),
 }
 
 :root {
@@ -372,4 +372,31 @@
     grid-column: 7/9;
     
     transform: translateY(-250%);
+}
+
+/* CARD SECTION */
+.cardSection{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.cardHeader{
+    grid-column: 1/11;
+    height: 20vh;
+}
+
+.cardHeader h3{
+    text-align: center;
+    align-self: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.cardContainer{
+    grid-column: 2/10;
+    border: 2px solid #111111;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
 }

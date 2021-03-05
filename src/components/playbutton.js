@@ -1,6 +1,6 @@
 import React from "react"
 import "./landing.css"
-import Play from "./Playbutton.svg"
+import Play from "../assets/Playbutton.svg"
 
 export default function playbutton(){
     return(

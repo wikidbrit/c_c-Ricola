@@ -2,16 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Nav from "./components/nav.js"
-import Hero from "./components/hero.js"
-import SubText from "./components/subtext.js"
+import App from './App.js';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Nav style={ `position:fixed`}
-    />
-    <Hero />
-    <SubText />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

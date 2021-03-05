@@ -1,6 +1,6 @@
 import React from 'react';
-import ricolaLogo from './RicolaWorldLogos-02.png';
-import hamburger from './hamburger-03.png'
+import ricolaLogo from '../assets/RicolaWorldLogos-02.png';
+import hamburger from '../assets/hamburger-03.png'
 import './landing.css';
 
 export default function nav() {
