@@ -1,18 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './landing.css';
 import plus from '../assets/plus.svg';
 
 
-const heroButton = ({category}) => {
+const HeroButton = ({category}) => {
+
+    let [toggle, setToggle] = useState('show');
+    let [toggle2, setToggle2] = useState('hide');
+
+    // const toggler = () => {
+    //     setToggle(prev => !prev)
+    // }
+
+    const show = () => 
+    setToggle('hide')
+
+    const hide = () => 
+    setToggle2('show')
+
+    const classNames = 'HeroButton'
 
     return (
-        <div className="HeroButton" id={category}>
+        <React.Fragment>
+        <div className={`${classNames} ${toggle}`} id={category} onMouseEnter={show}>
             <img className="plusIcon" src={plus} alt="plus icon"/>
         </div>
+
+        <div className={`${classNames} ${toggle2}`} id={category} onMouseEnter={hide}>
+            Hej
+        </div>
+        </React.Fragment>
     );
 }
 
-export default heroButton;
+export default HeroButton;
 
 //if you want to change the state you need to pass in functions
 //on click functions -> button expands
+
+
+
+// `${classNames} ${toggle}`

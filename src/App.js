@@ -15,7 +15,7 @@ const query =
                 name
                 }
             }
-            footstepCollection{
+            footstepCollection(order: footstep_ASC){
               items{
                 footstep
                 h1

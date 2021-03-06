@@ -75,7 +75,6 @@ function Hero({buttonData}) {
               
                     />
                 ))}
-               
                 
                 <img src={Ground} alt="Ricola world ground" className='ground'/>
                 <img src={Toon} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus'/>
