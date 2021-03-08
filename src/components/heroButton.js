@@ -5,31 +5,31 @@ import plus from '../assets/plus.svg';
 
 const HeroButton = ({category}) => {
 
-    let [toggle, setToggle] = useState('show');
-    let [toggle2, setToggle2] = useState('hide');
+    // let [toggle, setToggle] = useState('show');
+    // let [toggle2, setToggle2] = useState('hide');
 
-    // const toggler = () => {
-    //     setToggle(prev => !prev)
-    // }
+    // // const toggler = () => {
+    // //     setToggle(prev => !prev)
+    // // }
 
-    const show = () => 
-    setToggle('hide')
+    // const show = () => 
+    // setToggle('hide')
 
-    const hide = () => 
-    setToggle2('show')
+    // const hide = () => 
+    // setToggle2('show')
 
-    const classNames = 'HeroButton'
+    // const classNames = 'HeroButton'
 
     return (
-        <React.Fragment>
-        <div className={`${classNames} ${toggle}`} id={category} onMouseEnter={show}>
-            <img className="plusIcon" src={plus} alt="plus icon"/>
+        // <React.Fragment>
+        <div className={`HeroButton ${category}`} id={category}>
+            <span>+</span>
         </div>
 
-        <div className={`${classNames} ${toggle2}`} id={category} onMouseEnter={hide}>
-            Hej
-        </div>
-        </React.Fragment>
+        // <div className={`${classNames} ${toggle2}`} id={category} onMouseEnter={hide}>
+        //     Hej
+        // </div>
+        // </React.Fragment>
     );
 }
 
