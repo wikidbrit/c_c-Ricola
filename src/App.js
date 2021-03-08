@@ -5,6 +5,10 @@ import Hero from "./components/hero.js"
 import SubText from "./components/subtext.js"
 import CardSection from "./components/cardSection.js"
 
+let natureButton = document.getElementById("Nature")
+
+
+
 const query = 
         `query {
             categoriesCollection(limit: 20)
