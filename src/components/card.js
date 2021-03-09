@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactCardFlip from 'react-card-flip';
-import Modal from './modal.js';
+// import Modal from './modal.js';
 
 
 const Card = ({ footstep, h3, image, style, json }) => {
@@ -48,10 +48,9 @@ const Card = ({ footstep, h3, image, style, json }) => {
                 <h4>Read more</h4>
             </div>
 
-{/* 
-            <Modal 
+
+            {/* <Modal 
             showModal={showModal}
-            setShowModal={setShowModal}
             toggler={toggler}
             footstep={footstep}
             h3={h3}
