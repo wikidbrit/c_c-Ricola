@@ -42,8 +42,14 @@ import Toon from '../assets/Rasmus.png';
 //         }`
 // ;
 
-function Hero({buttonData}) {
 
+
+function Hero({buttonData, hide, setHide, displayCardsSection}) {
+
+    // const [hover, setHover] = useState(false);
+    // const changeHover = () => {
+    // setHover(prev => !prev)
+    
     // let [data, setData] = useState(null);
 
     // useEffect(() => {
@@ -72,7 +78,7 @@ function Hero({buttonData}) {
                      <HeroButton 
                      key={item.number}
                      category={item.name}
-              
+                    // className={hover ? "Nature:hover:before" : null}
                     />
                 ))}
                 
@@ -81,10 +87,12 @@ function Hero({buttonData}) {
                 <img src={Village} alt="A rending of a small town" className='village'/>
                 <img src={Farm} alt="A rendering of a farm" className='farm'/>
                 <img src={Factory} alt="A rendering of the Ricola factory" className='factory'/>
-                <img src={Mountain} alt="Ricola world Mountain, its so impressive" className='Mountain'/>
+                <img src={Mountain} alt="Ricola world Mountain, its so impressive" className='Mountain'
+                    onClick={displayCardsSection}/>
                 <img src={RightCloud} alt="A cloud in the sky" className="RightCloud"/>
                 <img src={LeftCloudBig} alt="A cloud in the sky" className="LeftCloudBig"/>
                 <img src= {LeftCloudSmall} alt="A cloud in the sky" className="LeftCloudSmall"/>
+                
                 <PlayButton />
                 <div className="accentText">
                     <p className="accentHeader">EXPLORE THE <br></br>RICOLA WORLD</p>

@@ -5,10 +5,6 @@ import Hero from "./components/hero.js"
 import SubText from "./components/subtext.js"
 import CardSection from "./components/cardSection.js"
 
-let natureButton = document.getElementById("Nature")
-
-
-
 const query = 
         `query {
             categoriesCollection(limit: 20)
@@ -46,9 +42,24 @@ const query =
         }`
 ;
 
-
 function App() {
   let [data, setData] = useState(null);
+
+  let [hide, setHide] = useState("none");
+    const scrollTo = React.createRef();
+
+    const displayCardsSection = () =>{
+        setHide("grid");
+        // console.log("it works")
+
+        // setTimeout(() => {
+          scrollTo.current.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+        // }, 50);
+    } );
+  }
+
 
   useEffect(() => {
       window
@@ -75,11 +86,17 @@ function App() {
   return (
     <React.Fragment>
       <Nav style={ `position:fixed`}/>
-      <Hero buttonData={buttonData}/>
+      <Hero 
+      buttonData={buttonData}
+      displayCardsSection={displayCardsSection}
+      hide={hide}
+      setHide={setHide}
+      />
       <SubText />
       <CardSection 
         cardsData={cardsData}
-
+        hide={hide}
+        scrollTo={scrollTo}
       />
     </React.Fragment>
   );

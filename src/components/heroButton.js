@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './landing.css';
 import plus from '../assets/plus.svg';
 
