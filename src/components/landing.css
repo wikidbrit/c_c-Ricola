@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 @font-face{
     font-family: Frutiger;
   src: url(../assets/Frutiger-Next.ttf);
@@ -176,6 +175,7 @@
         contrast(150%);
 }
 
+
 /* FACTORY */
 
 .factory {
@@ -302,7 +302,6 @@
     filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.649))
         drop-shadow(2px 2px 1px rgba(255, 255, 255, 0.649))
         drop-shadow(-2px -2px 1px rgba(255, 255, 255, 0.649));
-
 }
 
 /* Accent Text */
@@ -384,14 +383,16 @@
 
 #Business{
     align-self:center;
+    justify-self: left;
     grid-column: 7/9;
-    transform: translateY(150%);
+    transform: translateY(150%)translateX(200%);
 }
 
 #x-Ricola{
     align-self:center;
+    justify-self: left;
     grid-column: 7/9;
-    transform: translateY(-250%);
+    transform: translateY(-250%)translateX(200%);
 }
 
 #Nature span, #People span, #Business span, #x-Ricola span {
@@ -406,6 +407,17 @@
 
 #Nature:hover:before {
     content: "Nature";
+}
+
+#Nature:hover ~ .Mountain {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(200%);
+filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(150%);
 }
 
 #Business:hover:before {
@@ -533,11 +545,6 @@
      font-weight: 700;
  }
 
- .hide{
+ /* .cardSection{
      display: none;
- }
-
- .front{
-     
- }
-
+ } */

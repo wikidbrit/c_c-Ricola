@@ -3,10 +3,16 @@ import CardHeader from './cardHeader.js';
 import CardContainer from './cardContainer.js';
 
 
-const CardSection = ({cardsData}) => {
+const CardSection = ({cardsData, hide, scrollTo}) => {
 
     return (
-        <div className="cardSection">
+        <div className="cardSection"
+        ref={scrollTo}
+        style={{
+            display: `${hide}`
+        }}
+        
+        >
             <CardHeader />
             <CardContainer cardsData={cardsData}/>
         </div>
