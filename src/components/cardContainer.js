@@ -13,6 +13,7 @@ const CardContainer = ({cardsData}) => {
             h3={item.h1}
             image={item.cardImage.url}
             imageDescript={item.cardImage.description}
+            extract={item.extract.json}
             />
             ))}
         </div>
