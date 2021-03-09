@@ -42,6 +42,7 @@ const query =
         }`
 ;
 
+
 function App() {
   let [data, setData] = useState(null);
 
@@ -50,14 +51,13 @@ function App() {
 
     const displayCardsSection = () =>{
         setHide("grid");
-        // console.log("it works")
-
+        
         // setTimeout(() => {
+          console.log('hellaoosas')
           scrollTo.current.scrollIntoView({
             behavior: "smooth",
             block: "nearest",
-        // }, 50);
-    } );
+    })
   }
 
 

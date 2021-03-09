@@ -288,9 +288,9 @@
 /* RASMUS */
 
 .rasmus {
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 1/2;
-    max-width: 120px;
+    max-width: 220px;
     justify-self: center;
     align-self: flex-end;
     transform: translateY(-20%);
@@ -298,13 +298,19 @@
 }
 
 .rasmus:hover {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.649))
-        drop-shadow(2px 2px 1px rgba(255, 255, 255, 0.649))
-        drop-shadow(-2px -2px 1px rgba(255, 255, 255, 0.649));
+    animation: rasmusMove 2s ease infinite;
+}
 
-    filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.649))
-        drop-shadow(2px 2px 1px rgba(255, 255, 255, 0.649))
-        drop-shadow(-2px -2px 1px rgba(255, 255, 255, 0.649));
+@keyframes rasmusMove {
+    0%{
+        transform: translateY(-20%);
+    }
+    50%{
+        transform: translateY(-30%);
+    }
+    100%{
+        transform: translateY(-20%);
+    }
 }
 
 /* Accent Text */
@@ -361,7 +367,6 @@
     grid-row: 1/2;
     justify-self: center;
     align-items: center;
-    justify-items: center;
     text-align: center;
     color: #ffffff;
     font-weight: 600;
@@ -373,10 +378,6 @@
 #Nature{
     align-self:center;
     transform: translateY(-100%) translateX(0%);
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
 }
 
 #People{
@@ -400,7 +401,7 @@
 
 #Nature span, #People span, #Business span, #x-Ricola span {
     margin: 0 auto;
-    padding-bottom: 1px;
+    padding-bottom: 3px;
 }
 
 #Nature:hover span, #x-Ricola:hover span, #Business:hover span, #People:hover span {
@@ -427,12 +428,45 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     content: "Business";
 }
 
+#Business:hover ~ .farm {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(200%);
+filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(150%);
+}
+
 #People:hover:before {
     content: "People";
 }
 
+#People:hover ~ .village {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(200%);
+filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(150%);
+}
+
 #x-Ricola:hover:before {
     content: "Ricola";
+}
+
+#x-Ricola:hover ~ .factory {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(200%);
+filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(150%);
 }
 
 #Nature:hover:before, #x-Ricola:hover:before , #Business:hover:before , #People:hover:before {
@@ -547,21 +581,3 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
      font-size: 40px;
      font-weight: 700;
  }
- .arrowDown{
-    animation: bounce 5s;
- }
- @keyframes bounce {
-    0%,
-    25%,
-    50%,
-    75%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-20px);
-    }
-    60% {
-      transform: translateY(-12px);
-    }
-  }
