@@ -5,7 +5,7 @@ const CardHeader = () => {
 
     return (
         <div className="cardHeader">
-            <img src={DownButton} alt="down button"/>
+            <img src={DownButton} alt="down button" className="arrowDown"/>
             <h3>Nature</h3>
             <div className="horizontalRule hr"></div>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './landing.css';
 import HeroButton from './heroButton.js';
 import PlayButton from './playbutton.js';
@@ -11,65 +11,20 @@ import Factory from '../assets/factory.png';
 import Farm from '../assets/farm.png';
 import Village from '../assets/village.png';
 import Toon from '../assets/Rasmus.png';
-
-
-
-// const query = `
-// query{
-//     footstep
-//       (id:"3bgRzGQT5iyeUbxEbI2sRA")
-//       {
-//         h1
-//         h2
-//         cardImage {
-//           title
-//           description
-//           url
-//         }
-//       }
-//   }`;
-
-// const query = 
-//         `query {
-//             categoriesCollection(limit: 20)
-//             {
-//             items
-//                 {
-//                 number
-//                 name
-//                 }
-//             } 
-//         }`
-// ;
-
-
+import ReactPlayer from 'react-player';
 
 function Hero({buttonData, hide, setHide, displayCardsSection}) {
 
-    // const [hover, setHover] = useState(false);
-    // const changeHover = () => {
-    // setHover(prev => !prev)
-    
-    // let [data, setData] = useState(null);
+    let [opacity, setOpacity] = useState("0%")
+    let [display, setDisplay] = useState( "none" )
+    let [playing, setPlaying] = useState( 'false' )
 
-    // useEffect(() => {
-    //     window
-    // .fetch(
-    // `https://graphql.contentful.com/content/v1/spaces/hr9iqsg7g59t?access_token=Pgo--ibSOmLEpNQiOr6dOeMUoxTsiBXzFe1DTJ0gk_k`,
-    // {
-    // method: "POST",
-    // headers: {
-    //     "Content-Type": "application/json",
-    // },
-    // body: JSON.stringify({ query }),
-    // }
-    // )
-    // .then(response => response.json())
-    // .then((json) => setData(json.data));    
-    // }, [])
-
-    // if (!data) return <span>Loading...</span>
-    // const buttonData = data.categoriesCollection.items;
+    const toggler = () => {
+        setOpacity(prev => !prev)
+        setDisplay(prev => !prev)
+        setPlaying(prev => !prev)
+        console.log('heloas')
+    }
 
     return (
         <div className ="hero-bg">
@@ -93,12 +48,28 @@ function Hero({buttonData, hide, setHide, displayCardsSection}) {
                 <img src={LeftCloudBig} alt="A cloud in the sky" className="LeftCloudBig"/>
                 <img src= {LeftCloudSmall} alt="A cloud in the sky" className="LeftCloudSmall"/>
                 
-                <PlayButton />
+                <PlayButton toggler={toggler} />
                 <div className="accentText">
                     <p className="accentHeader">EXPLORE THE <br></br>RICOLA WORLD</p>
                     <p className="accentUnder">LEARN MORE ABOUT <br></br>OUR SUSTAINABLE FOOTSTEPS...</p>
                     <div className="horizontalRule"></div>
-                </div>     
+                </div>
+                <div className="videoWrapper" onClick={toggler} style={{
+                        position:"absolute",
+                        height:"100%",
+                        width:"100%",
+                        backgroundColor:"rgba(0,0,0,0.5)",
+                        opacity:`${opacity ? "0%" : "100%" }`,
+                        display:`${display ? "none" : "block" }`,
+                    }}>
+                    <ReactPlayer url="https://youtu.be/HfyFRSD5YL0" playing={setPlaying ? "false" : "true" }
+                    style={{
+                        margin:"10vh auto",
+                        border:"2px solid #005245"
+                    }}
+                    />
+                </div>
+                
             </div>
         </div>
     )
