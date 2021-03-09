@@ -13,7 +13,9 @@ const CardContainer = ({cardsData}) => {
             h3={item.h1}
             image={item.cardImage.url}
             imageDescript={item.cardImage.description}
-            extract={item.extract.json}
+            extract={item.extract}
+            description={item.description}
+            // sdgCollection={item.sdGsCollection}
             />
             ))}
         </div>
@@ -21,3 +23,9 @@ const CardContainer = ({cardsData}) => {
 }
 
 export default CardContainer;
+
+
+// sdGsCollection{
+//     items{
+//       description
+//       url

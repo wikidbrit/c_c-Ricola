@@ -1,19 +1,20 @@
-// import React from 'react';
+import React from 'react';
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 
-// const Modal = ({toggler, showModal, footstep, h2, h3, json}) => {
-//     const showHideClassName = showModal ? "modal display-block" : "modal display-none";
+const Modal = ({toggler, showModal, footstep, h2, h3, description}) => {
+    const showHideClassName = showModal ? "modal display-block" : "modal display-none";
     
-//     return (
-//         <div className={showHideClassName}>
-//             <span>{footstep}</span>
-//             <h4>{h3}</h4>
-//             {/* <img src="" alt=""/>
-//             <h2>{h2}</h2>
-//             <p>{json}</p> */}
-//             <button type="button" onClick={toggler}>Close</button>
+    return (
+        <div className={showHideClassName}>
+            <span>{footstep}</span>
+            <h4>{h3}</h4>
+            <h2>{h2}</h2>
+            <p>{documentToReactComponents(description.json)}</p>
+            {/* <img src="url" alt=""/> */}
+            <p onClick={toggler}>x</p>
             
-//         </div>
-//     );
-// }
+        </div>
+    );
+}
 
-// export default Modal;
+export default Modal;
