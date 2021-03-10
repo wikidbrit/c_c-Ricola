@@ -12,14 +12,15 @@ import Farm from '../assets/farm.png';
 import Village from '../assets/village.png';
 import Toon from '../assets/Rasmus2.png';
 import ReactPlayer from 'react-player';
+import natureText from '../assets/natureText.png';
 
-function Hero({buttonData, hide, setHide, displayCardsSection}) {
+function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConstruction}) {
 
     let [opacity, setOpacity] = useState("0%")
     let [display, setDisplay] = useState( "none" )
     let [playing, setPlaying] = useState( false )
 
-    const toggler = () => {
+    const videoToggler = () => {
         setOpacity(prev => !prev)
         setDisplay(prev => !prev)
         setPlaying(prev => !prev)
@@ -32,34 +33,38 @@ function Hero({buttonData, hide, setHide, displayCardsSection}) {
                      <HeroButton 
                      key={item.number}
                      category={item.name}
-                    // className={hover ? "Nature:hover:before" : null}
+                    displayCardsSection={displayCardsSection}
+                    displayUnderConstruction={displayUnderConstruction}
                     />
                 ))}
                 
-                <img src={Ground} alt="Ricola world ground" className='ground'/>
-                <img src={Toon} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus' onClick={toggler} />
-                <img src={Village} alt="A rending of a small town" className='village'/>
-                <img src={Farm} alt="A rendering of a farm" className='farm'/>
-                <img src={Factory} alt="A rendering of the Ricola factory" className='factory'/>
-                <img src={Mountain} alt="Ricola world Mountain, its so impressive" className='Mountain'
+                <img src={Ground} alt="Ricola world ground" className='ground' style={{zIndex:'2'}}/>
+                <img src={Toon} style={{zIndex:'2'}} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus' onClick={videoToggler} />
+                <img src={Village} style={{zIndex:'2'}} alt="A rending of a small town" className='village' onClick={displayUnderConstruction}/>
+                <img src={Farm} style={{zIndex:'2'}} alt="A rendering of a farm" className='farm' onClick={displayUnderConstruction}/>
+                <img src={Factory} style={{zIndex:'2'}} alt="A rendering of the Ricola factory" className='factory' onClick={displayUnderConstruction}/>
+                <img src={Mountain} style={{zIndex:'2'}} alt="Ricola world Mountain, its so impressive" className='Mountain'
                     onClick={displayCardsSection}/>
                 <img src={RightCloud} alt="A cloud in the sky" className="RightCloud"/>
                 <img src={LeftCloudBig} alt="A cloud in the sky" className="LeftCloudBig"/>
                 <img src={LeftCloudSmall} alt="A cloud in the sky" className="LeftCloudSmall"/>
-                
+                <span className="natureTextWrapper">
+                    <img src={natureText} alt="The word nature" className='natureText'/>
+                </span>          
                 {/* <PlayButton toggler={toggler} /> */}
                 <div className="accentText">
                     <p className="accentHeader">EXPLORE THE <br></br>RICOLA WORLD</p>
                     <p className="accentUnder">LEARN MORE ABOUT <br></br>OUR SUSTAINABLE FOOTSTEPS...</p>
                     <div className="horizontalRule"></div>
                 </div>
-                <div className="videoWrapper" onClick={toggler} style={{
+                <div className="videoWrapper" onClick={videoToggler} style={{
                         position:"absolute",
                         height:"100%",
                         width:"100%",
                         backgroundColor:"rgba(0,0,0,0.5)",
                         opacity:`${opacity ? "0%" : "100%" }`,
                         display:`${display ? "none" : "block" }`,
+                        zIndex:"2"
                     }}>
                     <ReactPlayer 
                     

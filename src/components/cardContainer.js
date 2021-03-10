@@ -2,7 +2,6 @@ import React from 'react';
 import Card from './card.js'
 
 const CardContainer = ({cardsData}) => {
-    // console.log(cardsData)
     return (
         
         <div className="cardContainer">
@@ -13,7 +12,9 @@ const CardContainer = ({cardsData}) => {
             h3={item.h1}
             image={item.cardImage.url}
             imageDescript={item.cardImage.description}
-            extract={item.extract.json}
+            extract={item.extract}
+            description={item.description}
+            sdgCollection={item.sdGsCollection.items}
             />
             ))}
         </div>
@@ -21,3 +22,9 @@ const CardContainer = ({cardsData}) => {
 }
 
 export default CardContainer;
+
+
+// sdGsCollection{
+//     items{
+//       description
+//       url
