@@ -6,8 +6,12 @@ import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 
 const Card = ({ footstep, h3, image, style, extract, description, sdgCollection }) => {
     const [isFlipped, setIsFlipped] = useState(false);
-    const handleClick = () => {
+    
+    const handleClick = (event) => {
+        const clicked = event.target.id;
+        if (clicked !== "readMore"){
         setIsFlipped(!isFlipped);
+        }
     }
     
     const [showModal, setShowModal] = useState(false);
@@ -34,7 +38,7 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
         </div>
         
         
-        <div 
+        <div onClick={handleClick}
             className={`card ${style} back`}
             id={`card${footstep}`}
             style={{
@@ -46,17 +50,15 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
             <span>{footstep}</span>
             <h4>{h3}</h4>
             <p>{documentToReactComponents(extract.json)}</p>
-            <h4 className="readMore" onClick={toggler}>Read more</h4>
-            {/* {sdgCollection.map((item) => ( */}
+            <h4 id="readMore" onClick={toggler}>Read more</h4>
             <Modal 
                 showModal={showModal}
                 description={description}
                 footstep={footstep}
                 toggler={toggler}
                 h3={h3}
-                // url={item.url}
+                sdgCollection={sdgCollection}
             />
-            {/* ))} */}
         </div>
         </ReactCardFlip>
         
