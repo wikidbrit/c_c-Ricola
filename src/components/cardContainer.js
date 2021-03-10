@@ -1,7 +1,14 @@
-import React from 'react';
-import Card from './card.js'
+import React, { useState } from 'react';
+import Card from './card.js';
+import Modal from './modal.js';
 
 const CardContainer = ({cardsData}) => {
+    const [showModal, setShowModal] = useState(false);
+    const toggler = () => {
+        setShowModal(prev => !prev)
+    }
+
+
     return (
         
         <div className="cardContainer">
@@ -15,8 +22,18 @@ const CardContainer = ({cardsData}) => {
             extract={item.extract}
             description={item.description}
             sdgCollection={item.sdGsCollection.items}
+            toggler={toggler}
             />
             ))}
+            <Modal 
+                showModal={showModal}
+                toggler={toggler}
+                // description={item.description}
+                // footstep={footstep}
+                // toggler={toggler}
+                // h3={h3}
+                // sdgCollection={sdgCollection}
+            />
         </div>
     );
 }
