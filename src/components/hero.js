@@ -64,6 +64,7 @@ function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConst
                         backgroundColor:"rgba(0,0,0,0.5)",
                         opacity:`${opacity ? "0%" : "100%" }`,
                         display:`${display ? "none" : "block" }`,
+                        zIndex:"2"
                     }}>
                     <ReactPlayer 
                     

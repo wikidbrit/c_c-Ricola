@@ -48,7 +48,9 @@ function App() {
   let [data, setData] = useState(null);
 
   let [hide, setHide] = useState("none");
-  let scrollTo = React.createRef();
+  let [scrollTo, setScrollTo] = useState(true);
+
+
   let [construction, setConstruction] = useState("none");
   let scrollToConstruction = React.createRef();
   
@@ -56,12 +58,7 @@ function App() {
       setHide("grid");
       setConstruction("none");
       
-      // setTimeout(() => {
-      console.log('hellaoosas')
-      scrollTo.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-  })
+      setScrollTo(!scrollTo);
   }
   
   const displayUnderConstruction = () =>{

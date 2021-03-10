@@ -7,9 +7,6 @@ const CardContainer = ({cardsData}) => {
         <div className="cardContainer">
             {cardsData.map((item) => (
             <Card 
-            style={{
-                zIndex:'2',
-            }}
             key={item.footstep}
             footstep={item.footstep}
             h3={item.h1}

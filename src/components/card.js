@@ -30,7 +30,7 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 height: "90%",
-                zIndex: '2',
+                position:'static'
             }}
         >
             <span>{footstep}</span>
@@ -45,7 +45,7 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
             style={{
                 backgroundColor: "var(--yellow)",
                 backgroundSize: "cover",
-                height: "90%"
+                height: "90%",
             }}
         >
             <span>{footstep}</span>
@@ -53,7 +53,6 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
             <p>{documentToReactComponents(extract.json)}</p>
             <h4 id="readMore" onClick={toggler}>Read more</h4>
             <Modal 
-
                 showModal={showModal}
                 description={description}
                 footstep={footstep}
@@ -63,6 +62,7 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
             />
         </div>
         </ReactCardFlip>
+        
         
         );
     };

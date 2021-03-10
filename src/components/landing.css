@@ -215,35 +215,29 @@ body{
 }
 
 /* CLOUDS */
+.LeftCloudSmall, .LeftCloudBig, .RightCloud{
+    grid-row: 1/2;
+    width:40%;
+    z-index: 3;
+    animation: lMove2 10s ease-in-out infinite;
+    justify-self: center;
+}
+
 .LeftCloudSmall{
     grid-column: 2/4;
-    grid-row: 1/2;
-    justify-self: center;
     transform: translateY(50%);
-    width:40%;
-    animation: lMove1 10s ease-in-out infinite;
-    z-index: 1;
-
 }
 
 .LeftCloudBig{
     grid-column: 3/5;
-    grid-row: 1/2;
-    justify-self: center;
-    transform: translateY(20%);
-    width:40%;
-    animation: lMove2 10s ease-in-out infinite;
-    z-index: 1;
+    transform: translateY(20%); 
 }
 
 .RightCloud{
     grid-column: 5/7;
-    grid-row: 1/2;
     justify-self: right;
     transform: translateY(40%) translateX(-20%);
-    width:40%;
     animation: rMove 8s ease-in-out infinite;
-    z-index: 1;
 }
 
 @keyframes rMove {
@@ -331,38 +325,6 @@ body{
         drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
         contrast(150%);
 }
-/* PLAY BUTTON */
-
-/* .PlayButton {
-    height: 75px;
-    width: 75px;
-    border-radius: 50px;
-    background-color: var(--lightYellow);
-    grid-column: 2/3;
-    grid-row: 1/2;
-    justify-self: center;
-    transform: translateY(100%);
-    display: flex;
-}
-
-.PlaySymbol {
-    margin: 0 auto;
-    transform: translate(3px, 22.5px);
-    height: 40%;
-    width: auto;
-}
-
-.PlayButton:hover {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(251, 247, 0, 0.649))
-        drop-shadow(2px 2px 1px rgba(251, 247, 0, 0.649))
-        drop-shadow(-2px -2px 1px rgba(251, 247, 0, 0.649))
-        contrast(120%);
-    filter: drop-shadow(0px 0px 7px rgba(251, 247, 0, 0.649))
-        drop-shadow(2px 2px 1px rgba(251, 247, 0, 0.649))
-        drop-shadow(-2px -2px 1px rgba(251, 247, 0, 0.649))
-        contrast(120%);
-} */
-
 .rasmus {
     grid-column: 1/3;
     grid-row: 1/2;
@@ -372,8 +334,7 @@ body{
     transform: translateY(-20%);
     cursor: pointer;
 }
-
-.rasmus:hover {
+.rasmus:hover{
     animation: rasmusMove 0.5s ease infinite;
 }
 
@@ -453,16 +414,6 @@ body{
     transform: translateY(-250%);
 }
 
-/* #Nature span, #People span, #Business span, #x-Ricola span {
-    margin: 0 auto;
-    padding-bottom: 3px;
-} */
-
-/* #Nature:hover span, #x-Ricola:hover span, #Business:hover span, #People:hover span {
-    opacity: 0;
-
-} */
-
 .natureTextWrapper {
     grid-row:1/2;
     grid-column:3/5;
@@ -493,40 +444,6 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
     contrast(150%);
 }
-
-#Nature:hover:before {
-    /* content: "Nature"; */
-}
-
-#Business:hover:before {
-    /* content: "Business"; */
-}
-
-
-
-#People:hover:before {
-    /* content: "People"; */
-}
-
-#x-Ricola:hover:before {
-    /* content: "Ricola"; */
-}
-
-
-/* #Nature:hover:before, #x-Ricola:hover:before , #Business:hover:before , #People:hover:before {
-    font-style: italic;
-    padding: 8px 16px;
-    background-color:var(--green);
-    border-radius: 50px;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    justify-self: center;
-    text-align: center;
-    color: #ffffff;
-    font-size: 18px;
-    transform: translateX(-35%);
-} */
-
 
 /* CARD SECTION */
 .cardSection{
@@ -614,30 +531,59 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
      padding: 1vw;
  }
 
- .card h4{
-    margin: 1vh auto;
+
+.card span{
+    color: var(--white);
+    cursor: default;
+    font-size: 40px;
+    margin-right: 5px;
+    font-weight: 600;
+}
+.card h3{
+    font-weight: 600;
+    color:var(--white);
+    display: inline-block;
+}
+.card h4{
+    display: inline-block;
+    color: var(--green);
+
+}
+.react-card-front #card4, .react-card-front #card6 , .react-card-front #card8 , .react-card-front #card9 {
+    display: flex;
 }
 
- .card span{
-     color: var(--white);
-     cursor: default;
+.react-card-front #card4 h3, .react-card-front #card6 h3, .react-card-front #card8 h3, .react-card-front #card9 h3, .react-card-front #card4 span, .react-card-front #card6 span, .react-card-front #card8 span, .react-card-front #card9 span{
+    color:var(--green);
+}
+
+
+#card4 h3, #card9 h3, #card8 h3, #card4 span, #card8 span, #card9 span{
+    align-self: flex-end;
+}
+
+
+ #readMore{
+     margin-top: 3vh;
+    color: var(--green);
  }
 
- .card span{
-     font-size: 40px;
-     font-weight: 700;
- }
 
  #readMore:hover{
-    color: var(--green);
+    opacity:80%;
     cursor: pointer;
  }
 
  .modal{
-     width:18vw;
-     height:60vh;
+     width:100%;
+     height:100%;
      background-color: var(--green);
      font-size: 16px;
+     position: absolute;
+     top:0;
+     left:0;
+     overflow:auto;
+     /* z-index: 100 !important; */
  }
  .modal img{
      margin-right:10px;
@@ -649,8 +595,6 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 
  .display-block{
      display:block;
-     position: fixed;
-     z-index:1000;
  }
 
  .hide{
