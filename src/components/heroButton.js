@@ -1,37 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './landing.css';
 import plus from '../assets/plus.svg';
 
 
-const HeroButton = ({category}) => {
+const HeroButton = ({category, displayCardsSection, displayUnderConstruction}) => {
 
 
-    // let [toggle, setToggle] = useState('show');
+    let [toggle, setToggle] = useState("+");
     // let [toggle2, setToggle2] = useState('hide');
 
-    // // const toggler = () => {
-    // //     setToggle(prev => !prev)
-    // // }
+    const toggler = () => {
+        setToggle(prev => !prev)
+        // setToggle2(prev => !prev)
+    }
 
-    // const show = () => 
-    // setToggle('hide')
+    if(category==="Nature"){
+        console.log("nature")
+        return (
+            <div className={`HeroButton ${category}`} id={category} onMouseEnter={toggler} onMouseLeave={toggler} onClick={displayCardsSection}>
+                <span >{toggle ? "+" : `${category}`}</span>
+            </div>
+        );
+    } else {
+        console.log("other")
+        return (
+            <div className={`HeroButton ${category}`} id={category} onMouseEnter={toggler} onMouseLeave={toggler} onClick={displayUnderConstruction}>
+                <span >{toggle ? "+" : `${category}`}</span>
+            </div>
+        );
+    }
 
-    // const hide = () => 
-    // setToggle2('show')
-
-    // const classNames = 'HeroButton'
-
-    return (
-        // <React.Fragment>
-        <div className={`HeroButton ${category}`} id={category}>
-            <span>+</span>
-        </div>
-
-        // <div className={`${classNames} ${toggle2}`} id={category} onMouseEnter={hide}>
-        //     Hej
-        // </div>
-        // </React.Fragment>
-    );
+   
 }
 
 export default HeroButton;

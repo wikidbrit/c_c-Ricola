@@ -4,7 +4,10 @@ import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 const Modal = ({toggler, showModal, footstep, h2, h3, description, sdgCollection}) => {
     const showHideClassName = showModal ? "modal display-block" : "modal display-none";
     return (
-        <div className={showHideClassName}>
+        <div className={showHideClassName}
+        style={{
+            position:"relative", zIndex:'10',
+        }}>
             <span>{footstep}</span>
             <h4>{h3}</h4>
             <h2>{h2}</h2>

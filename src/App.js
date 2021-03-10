@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import Nav from "./components/nav.js"
+import Header from "./components/header.js"
 import Hero from "./components/hero.js"
 import SubText from "./components/subtext.js"
 import CardSection from "./components/cardSection.js"
+import UnderConstruction from './components/underConstruction.js' 
 
 const query = 
         `query {
@@ -47,17 +48,31 @@ function App() {
   let [data, setData] = useState(null);
 
   let [hide, setHide] = useState("none");
-    const scrollTo = React.createRef();
+  let scrollTo = React.createRef();
+  let [construction, setConstruction] = useState("none");
+  let scrollToConstruction = React.createRef();
+  
+  const displayCardsSection = () =>{
+      setHide("grid");
+      setConstruction("none");
+      
+      // setTimeout(() => {
+      console.log('hellaoosas')
+      scrollTo.current.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+  })
+  }
+  
+  const displayUnderConstruction = () =>{
+    setHide("none");
+    setConstruction("block");
+    scrollToConstruction.current.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+  })
 
-    const displayCardsSection = () =>{
-        setHide("grid");
-        
-        // setTimeout(() => {
-          console.log('hellaoosas')
-          scrollTo.current.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest",
-    })
+
   }
 
 
@@ -85,10 +100,11 @@ function App() {
 
   return (
     <React.Fragment>
-      <Nav style={ `position:fixed`}/>
+      <Header/>
       <Hero 
       buttonData={buttonData}
       displayCardsSection={displayCardsSection}
+      displayUnderConstruction={displayUnderConstruction}
       hide={hide}
       setHide={setHide}
       />
@@ -97,6 +113,11 @@ function App() {
         cardsData={cardsData}
         hide={hide}
         scrollTo={scrollTo}
+      />
+      <UnderConstruction
+        construction={construction}
+        displayUnderConstruction={displayUnderConstruction}
+        scrollToConstruction={scrollToConstruction}
       />
     </React.Fragment>
   );

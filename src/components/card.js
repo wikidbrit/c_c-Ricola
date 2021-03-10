@@ -29,7 +29,8 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                height: "90%"
+                height: "90%",
+                zIndex: '2',
             }}
         >
             <span>{footstep}</span>
@@ -52,6 +53,7 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
             <p>{documentToReactComponents(extract.json)}</p>
             <h4 id="readMore" onClick={toggler}>Read more</h4>
             <Modal 
+
                 showModal={showModal}
                 description={description}
                 footstep={footstep}

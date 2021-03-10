@@ -3,7 +3,7 @@ import CardHeader from './cardHeader.js';
 import CardContainer from './cardContainer.js';
 
 
-const CardSection = ({cardsData, hide, scrollTo}) => {
+const CardSection = ({cardsData, hide, scrollTo, buttonData}) => {
 
     return (
         <div className="cardSection"
@@ -11,9 +11,8 @@ const CardSection = ({cardsData, hide, scrollTo}) => {
         style={{
             display: `${hide}`
         }}
-        
         >
-            <CardHeader />
+            <CardHeader buttonData={buttonData}/>
             <CardContainer cardsData={cardsData}/>
         </div>
     );

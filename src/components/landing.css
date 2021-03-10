@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 @font-face{
     font-family: Frutiger;
@@ -23,10 +27,11 @@
 }
 
 .headerDiv {
-    height: 5vh;
+    z-index: 1000;
 }
 
 .hero-bg {
+    margin-top:5vh;
     height:80vh;
 }
 
@@ -38,7 +43,6 @@
     grid-column: 3/7;
     text-align: center;
     align-self: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: bold;
     color: var(--green);
@@ -47,7 +51,6 @@
 .subParagraph{
     grid-column: 3/7;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     color: var(--grey);
     font-size: 12pt;
@@ -62,12 +65,139 @@
     align-self: center;
 }
 
-.hamburgerIcon {
+/* .hamburgerIcon {
     max-width: 35px;
     height: auto;
     grid-column-start: 7;
     align-self: center;
-}
+} */
+
+/* MENU */
+
+/*menu*/
+.menu-toggle {
+    position: absolute;
+    top: 2vh;
+    right: 3vw;
+    z-index: 10;
+  }
+  
+  .menu-icon {
+    width: 20px;
+    height: 10px;
+    margin:0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .menu-icon span{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    height: 2px;
+    width: 100%;
+    background: var(--green);
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  
+  .menu-icon span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .menu-icon span:nth-child(2),.menu-icon span:nth-child(3) {
+    top: 5px;
+  }
+  
+  .menu-icon span:nth-child(4) {
+    top: 10px;
+  }
+  
+  .menu-icon.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  
+  .menu-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .menu-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .menu-icon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  
+  .menu-icon.open span{
+    background: var(--green);
+    position: absolute;
+    z-index: 100;
+  }
+  .menu {
+    background-color: var(--white);
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50%;
+    /*   this will hide our menu off the screen */
+    transform: translateX(0%);
+    transition: transform 1s ease;
+    z-index: 2;
+  }
+  .menu a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+  .menu a:hover{
+    transition: all 1s;
+    color:#fff/*#fbff47*/;
+  }
+  .menu-nav{
+    position: absolute;
+    left: 0;
+    text-align: left;
+    top: 22%;
+    transform: translateY(-50%);
+  }
+
+  .open{
+    transform: translateX(0);
+  }
+
+
+
+
+
+
+
 
 .ground {
     grid-row: 1/2;
@@ -81,11 +211,10 @@
 .wrapper {
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,204,0,1) 50%);
     clip-path: polygon(1% 0, 99% 0, 98% 99%, 2% 99%);
-    transition: all 0.5s ease-in-out 0;
+    transition: all 0.5s ease-in-out;
 }
 
 /* CLOUDS */
-
 .LeftCloudSmall{
     grid-column: 2/4;
     grid-row: 1/2;
@@ -155,92 +284,44 @@
 
 
 
-/* MOUNTAIN */
+.Mountain, .factory, .farm, .village{
+    grid-row: 1/2;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
 
 .Mountain {
     grid-column: 3/5;
-    grid-row: 1/2;
-    transform: translateY(0px);
     width:75%;
     align-self: center;
     transform: translate(13%, 3%);
-    transition: 100ms ease-in-out;
 }
-
-.Mountain:hover {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-        drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-        drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-        contrast(200%);
-    filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-        drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-        drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-        contrast(150%);
-}
-
-
-/* FACTORY */
 
 .factory {
     grid-column: 4/6;
-    grid-row: 1/2;
-    transform: translateY(0px);
     width:45%;
     justify-self: center;
     align-self: center;
     transform: translate(-16%, -44%);
-    transition: 100ms ease-in-out;
 }
-
-.factory:hover {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-        drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-        drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-        contrast(200%);
-    filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-        drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-        drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-        contrast(150%);
-}
-
-/* FARM */
 
 .farm {
     grid-column: 5/7;
-    grid-row: 1/2;
-    transform: translateY(0px);
     width:58%;
     justify-self: right;
     align-self: center;
     transform: translate(-7%, 29.5%);
-    transition: 100ms ease-in-out;
 }
-
-.farm:hover {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-        drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-        drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-        contrast(200%);
-    filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-        drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-        drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-        contrast(150%);
-}
-
-/* VILLAGE */
 
 .village {
     grid-column: 4/6;
-    grid-row: 1/2;
-    transform: translateY(0px);
     width:58%;
     justify-self: center;
     align-self: center;
     transform: translate(25%, 110%);
-    transition: 100ms ease-in-out;
 }
 
-.village:hover {
+.Mountain:hover, .farm:hover, .village:hover, .factory:hover {
     -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
         drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
         drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
@@ -250,10 +331,9 @@
         drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
         contrast(150%);
 }
-
 /* PLAY BUTTON */
 
-.PlayButton {
+/* .PlayButton {
     height: 75px;
     width: 75px;
     border-radius: 50px;
@@ -263,8 +343,6 @@
     justify-self: center;
     transform: translateY(100%);
     display: flex;
-    z-index: 0;
-    transition: 300ms ease-in-out;
 }
 
 .PlaySymbol {
@@ -283,9 +361,7 @@
         drop-shadow(2px 2px 1px rgba(251, 247, 0, 0.649))
         drop-shadow(-2px -2px 1px rgba(251, 247, 0, 0.649))
         contrast(120%);
-}
-
-/* RASMUS */
+} */
 
 .rasmus {
     grid-column: 1/3;
@@ -293,6 +369,8 @@
     max-width: 220px;
     justify-self: center;
     align-self: flex-end;
+    transform: translateY(-20%);
+    cursor: pointer;
 }
 
 .rasmus:hover {
@@ -342,133 +420,100 @@
 
 /* BUTTONS */
 .HeroButton {
-    width:30px;
+    font-size: 20px;
     background-color:var(--green);
     border-radius: 50px;
-    height:30px;
     grid-column: 2/3;
+    padding: 1vh 1vw;
+    color: #ffffff;
     display:flex;
+    font-style: italic;
     grid-row: 1/2;
     justify-self: center;
     transition: ease-in-out 100ms;
-
-}
-
-.plusIcon{
-    width:40%;
-    margin: 0 auto;
-}
-#Nature, #People, #Business, #x-Ricola {
-    background-color:var(--green);
-    border-radius: 50px;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    justify-self: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 26px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
+    align-self:center;
+    cursor: pointer;
 }
 
 #Nature{
-    align-self:center;
-    transform: translateY(-100%) translateX(0%);
+    transform: translateY(-100%);
 }
 
 #People{
-    align-self:center;
     transform: translateY(300%);
 }
 
 #Business{
-    align-self:center;
-    justify-self: left;
-    grid-column: 7/9;
-    transform: translateY(150%)translateX(200%);
+    grid-column: 6/9;
+    transform: translateY(150%);
 }
 
 #x-Ricola{
-    align-self:center;
-    justify-self: left;
-    grid-column: 7/9;
-    transform: translateY(-250%)translateX(200%);
+    grid-column: 6/9;
+    transform: translateY(-250%);
 }
 
-#Nature span, #People span, #Business span, #x-Ricola span {
+/* #Nature span, #People span, #Business span, #x-Ricola span {
     margin: 0 auto;
     padding-bottom: 3px;
-}
+} */
 
-#Nature:hover span, #x-Ricola:hover span, #Business:hover span, #People:hover span {
+/* #Nature:hover span, #x-Ricola:hover span, #Business:hover span, #People:hover span {
     opacity: 0;
 
+} */
+
+.natureTextWrapper {
+    grid-row:1/2;
+    grid-column:3/5;
+    transition: all 0.5s ease-in-out;
+    z-index:1;
+    align-self: center;
+    transform: translateY(-50%);
+    opacity:0%;
+}
+
+.natureText {
+    opacity:80%;
+    max-width:70%;
+    height:auto;
+}
+
+.Mountain:hover ~ .natureTextWrapper {
+    opacity:100%;
+}
+
+#Nature:hover ~ .Mountain, #Business:hover ~ .farm, #People:hover ~ .village, #x-Ricola:hover ~ .factory  {
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(200%);
+filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
+    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
+    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
+    contrast(150%);
 }
 
 #Nature:hover:before {
-    content: "Nature";
-}
-
-#Nature:hover ~ .Mountain {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(200%);
-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(150%);
+    /* content: "Nature"; */
 }
 
 #Business:hover:before {
-    content: "Business";
+    /* content: "Business"; */
 }
 
-#Business:hover ~ .farm {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(200%);
-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(150%);
-}
+
 
 #People:hover:before {
-    content: "People";
-}
-
-#People:hover ~ .village {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(200%);
-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(150%);
+    /* content: "People"; */
 }
 
 #x-Ricola:hover:before {
-    content: "Ricola";
+    /* content: "Ricola"; */
 }
 
-#x-Ricola:hover ~ .factory {
-    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(200%);
-filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
-    drop-shadow(2px 2px 1px rgba(0, 230, 251, 0.649))
-    drop-shadow(-2px -2px 1px rgba(0, 230, 251, 0.649))
-    contrast(150%);
-}
 
-#Nature:hover:before, #x-Ricola:hover:before , #Business:hover:before , #People:hover:before {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+/* #Nature:hover:before, #x-Ricola:hover:before , #Business:hover:before , #People:hover:before {
     font-style: italic;
     padding: 8px 16px;
     background-color:var(--green);
@@ -480,14 +525,13 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     color: #ffffff;
     font-size: 18px;
     transform: translateX(-35%);
-}
+} */
 
 
 /* CARD SECTION */
 .cardSection{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .cardHeader{
     grid-column: 1/11;
@@ -501,7 +545,6 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 .cardHeader h3{
     text-align: center;
     align-self: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: bold;
     color: var(--green);
@@ -571,7 +614,11 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
      padding: 1vw;
  }
 
- .card span, .card h3{
+ .card h4{
+    margin: 1vh auto;
+}
+
+ .card span{
      color: var(--white);
      cursor: default;
  }
@@ -582,15 +629,18 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
  }
 
  #readMore:hover{
-    color: var (--green);
+    color: var(--green);
     cursor: pointer;
  }
 
  .modal{
-     position: absolute;
-     width:40vw;
+     width:18vw;
      height:60vh;
      background-color: var(--green);
+     font-size: 16px;
+ }
+ .modal img{
+     margin-right:10px;
  }
 
  .display-none{
@@ -598,5 +648,15 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
  }
 
  .display-block{
+     display:block;
+     position: fixed;
+     z-index:1000;
+ }
+
+ .hide{
+     display:none;
+ }
+
+ .show{
      display:block;
  }
