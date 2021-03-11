@@ -37,7 +37,6 @@ function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConst
                     displayUnderConstruction={displayUnderConstruction}
                     />
                 ))}
-                
                 <img src={Ground} alt="Ricola world ground" className='ground' style={{zIndex:'2'}}/>
                 <img src={Toon} style={{zIndex:'2'}} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus' onClick={videoToggler} />
                 <img src={Village} style={{zIndex:'2'}} alt="A rending of a small town" className='village' onClick={displayUnderConstruction}/>
@@ -51,10 +50,9 @@ function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConst
                 <span className="natureTextWrapper">
                     <img src={natureText} alt="The word nature" className='natureText'/>
                 </span>          
-                {/* <PlayButton toggler={toggler} /> */}
                 <div className="accentText">
-                    <p className="accentHeader">EXPLORE THE <br></br>RICOLA WORLD</p>
-                    <p className="accentUnder">LEARN MORE ABOUT <br></br>OUR SUSTAINABLE FOOTSTEPS...</p>
+                    <p className="accentHeader">Explore the<br></br>Ricola World</p>
+                    <p className="accentUnder">Learn more about <br></br>our sustainable footsteps...</p>
                     <div className="horizontalRule"></div>
                 </div>
                 <div className="videoWrapper" onClick={videoToggler} style={{
