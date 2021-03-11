@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+#### Hyper Island Code and Collaborate Project - FED and UX
+# Ricola World 🌎
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo
+View the page at
+```
+https://admiring-wilson-c6c01d.netlify.app
+```
+*Note page only tested at desktop scale in google chrome.*
 
-## Available Scripts
+---
+### About this Brief 
+For this brief we worked with the current UX students at Hyper Island to develop a solution to effectively communicate the Ricola Sustainability Footsteps towards current employees in a way that was interactive and not overwhelming. 
 
-In the project directory, you can run:
+We created 'Ricola World', a web application that a user can interact with to get levels of the information. First level communicates the categories (x4), and then once interacting with that category they then get the footsteps within. These footsteps are initially condensed to a overview, but once interacting with the card are presented with the full information. This was our way of preventing information overload while still making the content available.
 
-### `npm start`
+---
+### Specifics
+**Goals**
+The goals for the team members included the following;
+1. Create a project we were proud of
+2. Utilize data driven design
+3. Operate as a team using agile methods
+4. Learn about each others class responsibilities
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Team Members**
+1. Henrik Mark (UX)
+2. Nimeeta Bansai (UX)
+3. Lisa Lee (FED)
+4. Paul Fleming (FED)
+5. Tuva Elise (FED)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Tools Used**
+1. Reactjs
+2. Contentful Headless CMS
+3. Netlify Deployment
+4. Reactjs Popup
+5. React-Card-Flip
+6. Miro
+7. Figma
+8. Adobe Illustrator
+9. Mark's Artist Abilities
 
-### `npm test`
+---
+### Conclusion
+As a team we were able to ideate, design, test, prototype, and develop this project in 5 weeks. While it might be incomplete we are very proud of what we were able to create using new tools and technology. As a team we believe we hit all our stated goals we outlined during our Point of Departure. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you 👋
