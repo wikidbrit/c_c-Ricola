@@ -21,11 +21,4 @@ const CardContainer = ({cardsData}) => {
         </div>
     );
 }
-
 export default CardContainer;
-
-
-// sdGsCollection{
-//     items{
-//       description
-//       url

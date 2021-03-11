@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import ReactCardFlip from 'react-card-flip';
-// import Modal from './modal.js';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import Popup from 'reactjs-popup';
-// import 'reactjs-popup/dist/index.css';
-
 
 const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollection }) => {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -15,11 +12,6 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
             setIsFlipped(!isFlipped);
         }
     }
-    
-    // const [showModal, setShowModal] = useState(false);
-    // const toggler = () => {
-    //     setShowModal(prev => !prev)
-    // }
     
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
@@ -78,20 +70,8 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
                 </div>
                 )}
                 </Popup>
-                
-                
-                {/* <Modal 
-                    showModal={showModal}
-                    description={description}
-                    footstep={footstep}
-                    toggler={toggler}
-                    h3={h3}
-                    sdgCollection={sdgCollection}
-                /> */}
                 </div>
                 </ReactCardFlip>
-                
-                
                 );
             };
             

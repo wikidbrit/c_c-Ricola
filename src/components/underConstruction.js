@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import UCimage from '../assets/underConstruction.png';
 
-const UnderConstruction = ({construction, displayUnderConstruction, scrollToUC}) => {
+const UnderConstruction = ({construction}) => {
 
     let scrollToConstruction = React.createRef();
 

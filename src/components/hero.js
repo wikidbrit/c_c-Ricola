@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './landing.css';
 import HeroButton from './heroButton.js';
-// import PlayButton from './playbutton.js';
 import Ground from '../assets/ground.png';
 import RightCloud from '../assets/cloud3.png';
 import LeftCloudBig from '../assets/cloud2.png';
@@ -60,7 +59,6 @@ function Hero({buttonData, displayCardsSection, displayUnderConstruction}) {
                     hoverFarm={hoverFarm}
                     hoverVillage={hoverVillage}
                     hoverFactory={hoverFactory}
-
                     />
                 ))}
                 <img src={Ground} alt="Ricola world ground" className='ground' style={{zIndex:'2'}}/>
@@ -88,14 +86,12 @@ function Hero({buttonData, displayCardsSection, displayUnderConstruction}) {
                         zIndex:"2"
                     }}>
                     <ReactPlayer 
-                    
                     url="https://youtu.be/HfyFRSD5YL0"
                     playing={playing}
                     style={{
                         margin:"10vh auto",
                         border:"2px solid #005245"
                     }}
-                    
                     />
                 </div>
                 

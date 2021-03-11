@@ -7,8 +7,6 @@ export default function Header() {
     const toggler = () => {
         setMenu(prev => !prev)
     }
-
-
     return (
     
         <div className="headerDiv" style={{"position":"fixed", "top": "0", 'backgroundColor':'white'}}>
