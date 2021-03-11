@@ -52,7 +52,7 @@ function App() {
 
 
   let [construction, setConstruction] = useState("none");
-  let scrollToConstruction = React.createRef();
+  let [scrollToUC, setScrollToUC] = useState(true);
   
   const displayCardsSection = () =>{
       setHide("grid");
@@ -64,13 +64,11 @@ function App() {
   const displayUnderConstruction = () =>{
     setHide("none");
     setConstruction("block");
-    scrollToConstruction.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-  })
 
-
+    setScrollToUC(!scrollToUC);
   }
+
+
 
 
   useEffect(() => {
@@ -103,7 +101,6 @@ function App() {
       displayCardsSection={displayCardsSection}
       displayUnderConstruction={displayUnderConstruction}
       hide={hide}
-      setHide={setHide}
       />
       <SubText />
       <CardSection 
@@ -114,7 +111,7 @@ function App() {
       <UnderConstruction
         construction={construction}
         displayUnderConstruction={displayUnderConstruction}
-        scrollToConstruction={scrollToConstruction}
+        scrollToConstruction={scrollToUC}
       />
     </React.Fragment>
   );

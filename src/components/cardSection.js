@@ -5,14 +5,14 @@ import CardContainer from './cardContainer.js';
 
 const CardSection = ({cardsData, hide, scrollTo, buttonData}) => {
 
-let scrollToNature = React.createRef();
-
-useEffect(() => {
-    scrollToNature.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-  })
-})
+    let scrollToNature = React.createRef();
+    
+    useEffect(() => {
+        scrollToNature.current.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+      })
+    })
 
     return (
         <div className="cardSection"
