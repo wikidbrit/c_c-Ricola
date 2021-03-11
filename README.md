@@ -1,7 +1,7 @@
 #### Hyper Island Code and Collaborate Project - FED and UX
 # Ricola World 🌎
 
-###Demo
+### Demo
 View the page at
 ```
 https://admiring-wilson-c6c01d.netlify.app
@@ -9,13 +9,13 @@ https://admiring-wilson-c6c01d.netlify.app
 *Note page only tested at desktop scale in google chrome.*
 
 ---
-###About this Brief 
+### About this Brief 
 For this brief we worked with the current UX students at Hyper Island to develop a solution to effectively communicate the Ricola Sustainability Footsteps towards current employees in a way that was interactive and not overwhelming. 
 
 We created 'Ricola World', a web application that a user can interact with to get levels of the information. First level communicates the categories (x4), and then once interacting with that category they then get the footsteps within. These footsteps are initially condensed to a overview, but once interacting with the card are presented with the full information. This was our way of preventing information overload while still making the content available.
 
 ---
-###Specifics
+### Specifics
 **Goals**
 The goals for the team members included the following;
 1. Create a project we were proud of
@@ -42,7 +42,7 @@ The goals for the team members included the following;
 9. Mark's Artist Abilities
 
 ---
-###Conclusion
+### Conclusion
 As a team we were able to ideate, design, test, prototype, and develop this project in 5 weeks. While it might be incomplete we are very proud of what we were able to create using new tools and technology. As a team we believe we hit all our stated goals we outlined during our Point of Departure. 
 
 Thank you 👋
