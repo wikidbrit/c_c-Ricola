@@ -14,7 +14,7 @@ export default function Header() {
         <div className="headerDiv" style={{"position":"fixed", "top": "0", 'backgroundColor':'white'}}>
             <img src={ricolaLogo} className="ricolaLogo" alt="Ricola Logo"/>
             <nav>
-                <a className="menu-toggle">
+                <a href="" className="menu-toggle">
                     <div className={`menu-icon ${menu ? "close" : "open"}`} onClick={toggler}>
                         <span></span>
                         <span></span>
