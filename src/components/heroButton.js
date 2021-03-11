@@ -12,7 +12,7 @@ const HeroButton = ({category, displayCardsSection, displayUnderConstruction, to
     } if(category==="Business"){
         return (
             <div className={`HeroButton ${category}`} id={category} onMouseEnter={hoverFarm} onMouseLeave={hoverFarm} onClick={displayUnderConstruction}>
-                <span >{toggleBusiness ? "+" : `${category}`}</span>
+                <span>{toggleBusiness ? "+" : `${category}`}</span>
             </div>
         );
     } if(category==="People"){
