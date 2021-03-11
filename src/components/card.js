@@ -31,12 +31,12 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            height: "80%",
+            height: "100%",
             position:'static'
         }}
         >
-        <span>{footstep}</span>
-        <h3>{h3}</h3>
+            <span>{footstep}</span>
+            <h3>{h3}</h3>
         </div>
         
         
@@ -46,11 +46,10 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
         style={{
             backgroundColor: "var(--yellow)",
             backgroundSize: "cover",
-            height: "80%",
+            height: "100%",
         }}
         >
-        <span>{footstep}</span>
-        <h4>{h3}</h4>
+        <h4>{footstep} {h3}</h4>
         <p>{documentToReactComponents(extract.json)}</p>
         
         <Popup trigger={<button id="readMore">Read more</button>}>

@@ -70,7 +70,7 @@ body{
 /*menu*/
 .menu-toggle {
     position: absolute;
-    top: 2vh;
+    top: 1vh;
     right: 3vw;
     z-index: 10;
   }
@@ -458,7 +458,6 @@ body{
     background-color:var(--green);
     border-radius: 50px;
     min-height: 25px;
-    max-width: 20px;
     grid-column: 2/3;
     padding: 1vh 1vw;
     color: #ffffff;
@@ -490,7 +489,7 @@ body{
     transform: translateY(-250%);
 }
 
-.natureTextWrapper {
+/* .natureTextWrapper {
     grid-row:1/2;
     grid-column:3/5;
     transition: all 0.5s ease-in-out;
@@ -504,7 +503,7 @@ body{
     opacity:80%;
     max-width:70%;
     height:auto;
-}
+} */
 
 .Mountain:hover ~ .natureTextWrapper {
     opacity:100%;
@@ -604,46 +603,125 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     grid-row: 3 / 4;
  }
  .card{
-     padding: 2vw;
      color:var(--green);
+
  }
 
  .card p{
     font-family: Frutiger;
+    font-size: 16px;
+    font-size: 1.2vw;
  }
 
-
 .card span{
+    font-family: Frutiger;
     color: var(--white);
     cursor: default;
     font-size: 40px;
-    margin-right: 5px;
-    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-weight: bold;
 }
+/* FRONT CARD */
+
+/* card heading */
+
 .card h3{
+    font-family: Frutiger;
     font-weight: 600;
+    font-size: 22px;
+    font-size: 1.5vw;
     color:var(--white);
     display: inline-block;
-}
-.card h4{
-    display: inline-block;
-    color: var(--green);
-
-}
-.react-card-front #card4, .react-card-front #card6 , .react-card-front #card8 , .react-card-front #card9 {
-    display: flex;
+    text-align: center;
+    margin:0 auto;
 }
 
-.react-card-front #card4 h3, .react-card-front #card6 h3, .react-card-front #card8 h3, .react-card-front #card9 h3, .react-card-front #card4 span, .react-card-front #card6 span, .react-card-front #card8 span, .react-card-front #card9 span{
+.react-card-front .card{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+
+#card2 h3, #card4 h3, #card6 h3, #card8 h3, #card10 h3{
+   grid-column: 1/4;
+   grid-row: 3/4;
+   align-self: flex-end;
+}
+ #card2 span, #card4 span, #card6 span, #card8 span, #card10 span{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: flex-start;
+ }
+
+ #card1 span, #card3 span, #card5 span, #card7 span, #card9 span{
+    grid-column: 1/4;
+   grid-row: 3/4;
+   align-self: flex-end;
+}
+#card1 h3, #card3 h3, #card5 h3, #card7 h3, #card9 h3{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    padding-top:10px;
+ }
+
+ #card2 h3, #card10 h3{
+     background-color: var(--yellow);
+     width:100%;
+     padding: 10px 0;
+     color:var(--green);
+ }
+
+ #card2 span, #card10 span{
     color:var(--green);
 }
 
-#card4 h3, #card9 h3, #card8 h3, #card4 span, #card8 span, #card9 span{
-    align-self: flex-end;
+ #card3 h3 {
+    background-color: var(--green);
+    width:100%;
+    padding: 10px 0;
+    max-height: 30px;
 }
+
+#card5 h3, #card9 h3 {
+    background-color: var(--yellow);
+    color:var(--green);
+    width:100%;
+    padding: 10px 0;
+    max-height: 30px;
+}
+
+#card6 span, #card8 span{
+    color:var(--green);
+}
+
+#card6 h3, #card8 h3 {
+    background-color: var(--green);
+    width:100%;
+    padding: 10px 0;
+}
+
+#card4 span, #card4 h3{
+    color:var(--green);
+}
+#card4 h3{
+    padding-bottom: 10px;
+}
+
+/* backside card heading */
+.react-card-back h4{
+    font-family: Frutiger;
+    padding: 10px;
+    font-size: 20px;
+    font-size: 1.3vw;
+}
+
 .react-card-back p{
-    margin-top:10px;
+    padding: 5px;
 }
+
 
 .hide{
     display:none;
@@ -662,11 +740,11 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     outline: none;
     font-weight: bold;
     position: absolute;
-    bottom:20px;
+    bottom:10px;
+    padding:10px;
 }
 
 #readMore:hover{
-   opacity:80%;
    cursor: pointer;
 }
 .close{
@@ -690,7 +768,7 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     font-family: Frutiger;
     font-size:14px;
     color: var(--green);
-    background: var(--white);
+    background: #f1f1dd;
     padding: 5vw;
     -webkit-column-count: 2;
     column-count: 2;
@@ -736,12 +814,12 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 } */
 
 .popup-arrow {
-  color: rgb(255, 255, 255);
+
   display:none;
 }
 [role='tooltip'].popup-content {
   width: 50vw;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 7px 7px 10px;
 }
 
 .popup-content h4, .popup-content span{
