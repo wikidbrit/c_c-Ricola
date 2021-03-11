@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './landing.css';
-import plus from '../assets/plus.svg';
 
 
 const HeroButton = ({category, displayCardsSection, displayUnderConstruction}) => {

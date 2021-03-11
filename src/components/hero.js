@@ -10,9 +10,8 @@ import Mountain from '../assets/mountain.png';
 import Factory from '../assets/factory.png';
 import Farm from '../assets/farm.png';
 import Village from '../assets/village.png';
-import Toon from '../assets/Rasmus2.png';
+import Toon from '../assets/RicolaAvatarPlaceholder.png';
 import ReactPlayer from 'react-player';
-import natureText from '../assets/natureText.png';
 
 function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConstruction}) {
 
@@ -38,7 +37,7 @@ function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConst
                     />
                 ))}
                 <img src={Ground} alt="Ricola world ground" className='ground' style={{zIndex:'2'}}/>
-                <img src={Toon} style={{zIndex:'2'}} alt="A little cartoon Rasmus to help guide your journey though Ricola World" className='rasmus' onClick={videoToggler} />
+                <img src={Toon} style={{zIndex:'2'}} alt="" className='rasmus' onClick={videoToggler} />
                 <img src={Village} style={{zIndex:'2'}} alt="A rending of a small town" className='village' onClick={displayUnderConstruction}/>
                 <img src={Farm} style={{zIndex:'2'}} alt="A rendering of a farm" className='farm' onClick={displayUnderConstruction}/>
                 <img src={Factory} style={{zIndex:'2'}} alt="A rendering of the Ricola factory" className='factory' onClick={displayUnderConstruction}/>
@@ -46,10 +45,7 @@ function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConst
                     onClick={displayCardsSection}/>
                 <img src={RightCloud} alt="A cloud in the sky" className="RightCloud"/>
                 <img src={LeftCloudBig} alt="A cloud in the sky" className="LeftCloudBig"/>
-                <img src={LeftCloudSmall} alt="A cloud in the sky" className="LeftCloudSmall"/>
-                <span className="natureTextWrapper">
-                    <img src={natureText} alt="The word nature" className='natureText'/>
-                </span>          
+                <img src={LeftCloudSmall} alt="A cloud in the sky" className="LeftCloudSmall"/>       
                 <div className="accentText">
                     <p className="accentHeader">Explore the<br></br>Ricola World</p>
                     <p className="accentUnder">Learn more about <br></br>our sustainable footsteps...</p>

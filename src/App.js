@@ -5,6 +5,10 @@ import Hero from "./components/hero.js"
 import SubText from "./components/subtext.js"
 import CardSection from "./components/cardSection.js"
 import UnderConstruction from './components/underConstruction.js' 
+import ricolaLogo from './assets/RicolaWorldLogos-02.png';
+import loadingIcon from './assets/loadingIcon.png';
+import './components/landing.css';
+
 
 const query = 
         `query {
@@ -87,7 +91,10 @@ function App() {
   .then((json) => setData(json.data));    
   }, [])
 
-  if (!data) return <span>Loading...</span>
+  if (!data) return <span className="loadingSpan">
+    <img src={ricolaLogo} alt="The Ricola Logo Loading Icon" className="ricolaWorldLoading"></img>
+    <img src={loadingIcon} alt='a spinnging loading icon' className='loadingIcon'></img>
+  </span>
   
   const buttonData = data.categoriesCollection.items;
   const cardsData = data.footstepCollection.items;

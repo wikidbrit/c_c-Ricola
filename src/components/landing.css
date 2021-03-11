@@ -65,15 +65,6 @@ body{
     align-self: center;
 }
 
-/* .hamburgerIcon {
-    max-width: 35px;
-    height: auto;
-    grid-column-start: 7;
-    align-self: center;
-} */
-
-/* MENU */
-
 /*menu*/
 .menu-toggle {
     position: absolute;
@@ -192,7 +183,6 @@ body{
     transform: translateX(0);
   }
 
-
 .ground {
     grid-row: 1/2;
     grid-column: 3/7;
@@ -200,6 +190,20 @@ body{
     height: auto;
     align-self: center;
     justify-self: center;
+    animation: GroundMove1 12s ease-in-out infinite;
+    transform: translateY(0%);
+}
+
+@keyframes GroundMove1 {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(3%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 .wrapper {
@@ -270,8 +274,6 @@ body{
     }
 }
 
-
-
 .Mountain, .factory, .farm, .village{
     grid-row: 1/2;
     transition: 100ms ease-in-out;
@@ -283,6 +285,19 @@ body{
     width:75%;
     align-self: center;
     transform: translate(13%, 3%);
+    animation: MountianMove1 12s ease-in-out infinite;
+}
+
+@keyframes MountianMove1 {
+    0%{
+        transform: translate(13%, 3%);
+    }
+    50%{
+        transform: translate(13%, 11%);
+    }
+    100% {
+        transform: translate(13%, 3%);
+    }
 }
 
 .factory {
@@ -291,6 +306,19 @@ body{
     justify-self: center;
     align-self: center;
     transform: translate(-16%, -44%);
+    animation: FactoryMove1 12s ease-in-out infinite;
+}
+
+@keyframes FactoryMove1 {
+    0%{
+        transform: translate(-16%, -44%);
+    }
+    50%{
+        transform: translate(-16%, -34%);
+    }
+    100% {
+        transform: translate(-16%, -44%);
+    }
 }
 
 .farm {
@@ -299,6 +327,19 @@ body{
     justify-self: right;
     align-self: center;
     transform: translate(-7%, 29.5%);
+    animation: FarmMove1 12s ease-in-out infinite;
+}
+
+@keyframes FarmMove1 {
+    0%{
+        transform: translate(-7%, 29.5%);
+    }
+    50%{
+        transform: translate(-7%, 40%);
+    }
+    100% {
+        transform: translate(-7%, 29.5%);
+    }
 }
 
 .village {
@@ -307,6 +348,19 @@ body{
     justify-self: center;
     align-self: center;
     transform: translate(25%, 110%);
+    animation: VillageMove1 12s ease-in-out infinite;
+}
+
+@keyframes VillageMove1 {
+    0%{
+        transform: translate(25%, 110%);
+    }
+    50%{
+        transform: translate(25%, 122%);
+    }
+    100% {
+        transform: translate(25%, 110%);
+    }
 }
 
 .Mountain:hover, .farm:hover, .village:hover, .factory:hover {
@@ -322,25 +376,30 @@ body{
 .rasmus {
     grid-column: 1/3;
     grid-row: 1/2;
-    max-width: 220px;
+    max-width: 25%;
     justify-self: center;
     align-self: flex-end;
     transform: translateY(-20%);
     cursor: pointer;
+    background-image: url(../assets/RicolaAvatar.png);
+    background-size: contain;
 }
 .rasmus:hover{
-    animation: rasmusMove 0.5s ease infinite;
+    animation: rasmusMove 0.6s ease infinite;
 }
 
 @keyframes rasmusMove {
     0%{
         transform: translateY(-20%);
+        background-image: url(../assets/RicolaAvatar.png);
     }
     50%{
         transform: translateY(-25%);
+        background-image: url(../assets/RicolaAvatarRun.png);
     }
     100%{
         transform: translateY(-20%);
+        background-image: url(../assets/RicolaAvatar.png);
     }
 }
 
@@ -416,7 +475,7 @@ body{
     z-index:1;
     align-self: center;
     transform: translateY(-50%);
-    opacity:0%;
+    opacity:1%;
 }
 
 .natureText {
@@ -676,7 +735,6 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     margin-right:10px;
  }
 
-
  .popup-content h2{
     font-size: 16px;
  }
@@ -690,3 +748,38 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
  .popup-content img{
      margin-right:5px;
  }
+ .show{
+     display:block;
+ }
+
+ /* Loading State */
+
+ .loadingSpan {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+
+.ricolaWorldLoading {
+    margin: 10vh auto;
+    max-width: 40vw;
+}
+
+.loadingIcon {
+    width: 70px;
+    margin: -30vh auto;
+    animation: rotate 2s linear infinite;
+    transform: rotate(0deg);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
