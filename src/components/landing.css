@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 body{
     font-size: 16px;
@@ -305,19 +307,36 @@ body{
     width:45%;
     justify-self: center;
     align-self: center;
-    transform: translate(-16%, -44%);
+    /* transform: translate(-16%, -44%); */
+    -webkit-transform: translatex(-16%) translatey(-44%);
+    -moz-transform: translatex(-16%) translatey(-44%);
+    -o-transform: translatex(-16%) translatey(-44%);
+    -ms-transform: translatex(-16%) translatey(-44%);
+    transform: translatex(-16%) translatey(-44%);
     animation: FactoryMove1 12s ease-in-out infinite;
 }
 
 @keyframes FactoryMove1 {
     0%{
-        transform: translate(-16%, -44%);
+        -webkit-transform: translatex(-16%) translatey(-44%);
+        -moz-transform: translatex(-16%) translatey(-44%);
+        -o-transform: translatex(-16%) translatey(-44%);
+        -ms-transform: translatex(-16%) translatey(-44%);
+        transform: translatex(-16%) translatey(-44%);
     }
     50%{
-        transform: translate(-16%, -34%);
+        -webkit-transform: translatex(-16%) translatey(-34%);
+        -moz-transform: translatex(-16%) translatey(-34%);
+        -o-transform: translatex(-16%) translatey(-34%);
+        -ms-transform: translatex(-16%) translatey(-34%);
+        transform: translatex(-16%) translatey(-34%);
     }
     100% {
-        transform: translate(-16%, -44%);
+        -webkit-transform: translatex(-16%) translatey(-44%);
+        -moz-transform: translatex(-16%) translatey(-44%);
+        -o-transform: translatex(-16%) translatey(-44%);
+        -ms-transform: translatex(-16%) translatey(-44%);
+        transform: translatex(-16%) translatey(-44%);
     }
 }
 
@@ -438,11 +457,14 @@ body{
     font-size: 20px;
     background-color:var(--green);
     border-radius: 50px;
+    min-height: 25px;
+    max-width: 20px;
     grid-column: 2/3;
     padding: 1vh 1vw;
     color: #ffffff;
     display:flex;
     font-style: italic;
+    font-weight: 700;
     grid-row: 1/2;
     justify-self: center;
     transition: ease-in-out 100ms;
