@@ -501,7 +501,6 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 }
 
 .react-card-front .card{
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -574,15 +573,19 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 }
 
 /* backside card heading */
+.react-card-back span{
+    color:var(--green);
+    padding: 0px 10px;
+}
 .react-card-back h4{
+    display: inline;
     font-family: Frutiger;
-    padding: 10px;
     font-size: 20px;
     font-size: 1.3vw;
 }
 
 .react-card-back p{
-    padding: 5px;
+    padding: 15px;
 }
 
 
@@ -604,7 +607,7 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     font-weight: bold;
     position: absolute;
     bottom:10px;
-    padding:10px;
+    padding:0 30px 20px 30px;
 }
 
 #readMore:hover{
@@ -632,7 +635,7 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     font-size:14px;
     color: var(--green);
     background: #f1f1dd;
-    padding: 5vw;
+    padding: 70px;
     -webkit-column-count: 2;
     column-count: 2;
     margin: 0 auto;
@@ -644,7 +647,6 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
   }
 
 .popup-arrow {
-
   display:none;
 }
 [role='tooltip'].popup-content {
@@ -655,6 +657,7 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 .popup-content h4, .popup-content span{
     font-size: 20px;
     display: inline-block;
+    margin-bottom: 15px;
  }
  .popup-content span{
      font-size: 32px;
@@ -664,6 +667,7 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 
  .popup-content h2{
     font-size: 16px;
+    margin-bottom: 15px;
  }
  
  .popup-content p{

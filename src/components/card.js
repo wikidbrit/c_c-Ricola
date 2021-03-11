@@ -41,7 +41,8 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
             height: "100%",
         }}
         >
-        <h4>{footstep} {h3}</h4>
+        <span>{footstep} </span>
+        <h4>{h3}</h4>
         <p>{documentToReactComponents(extract.json)}</p>
         
         <Popup trigger={<button id="readMore">Read more</button>}>
@@ -54,14 +55,12 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
                     close();
                 }}
                 >x</button>
-                <div className="column1">
                 <span>{footstep}</span>
                 <h4>{h3}</h4>
-                </div>
-                <div className="column2">
+                
                 <h2>{h2}</h2>
                 <p>{documentToReactComponents(description.json)}</p>
-                </div>
+                
                 <div className="sdgs">
                 {sdgCollection.map((item) => (
                     <img src={item.url} alt="sdg" width="60px"/>
