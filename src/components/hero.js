@@ -10,7 +10,7 @@ import Mountain from '../assets/mountain.png';
 import Factory from '../assets/factory.png';
 import Farm from '../assets/farm.png';
 import Village from '../assets/village.png';
-import Toon from '../assets/Rasmus2.png';
+import Toon from '../assets/RicolaAvatar.png';
 import ReactPlayer from 'react-player';
 import natureText from '../assets/natureText.png';
 

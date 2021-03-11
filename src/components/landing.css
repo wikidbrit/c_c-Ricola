@@ -328,7 +328,7 @@ body{
 .rasmus {
     grid-column: 1/3;
     grid-row: 1/2;
-    max-width: 220px;
+    max-width: 25%;
     justify-self: center;
     align-self: flex-end;
     transform: translateY(-20%);

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import ricolaLogo from '../assets/RicolaWorldLogos-02.png';
-import hamburger from '../assets/hamburger-03.png'
 import './landing.css';
 
 export default function Header() {
@@ -15,7 +14,7 @@ export default function Header() {
         <div className="headerDiv" style={{"position":"fixed", "top": "0", 'backgroundColor':'white'}}>
             <img src={ricolaLogo} className="ricolaLogo" alt="Ricola Logo"/>
             <nav>
-                <a href="#" className="menu-toggle">
+                <a className="menu-toggle">
                     <div className={`menu-icon ${menu ? "close" : "open"}`} onClick={toggler}>
                         <span></span>
                         <span></span>
