@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './landing.css';
 import HeroButton from './heroButton.js';
-// import PlayButton from './playbutton.js';
 import Ground from '../assets/ground.png';
 import RightCloud from '../assets/cloud3.png';
 import LeftCloudBig from '../assets/cloud2.png';
@@ -13,11 +12,17 @@ import Village from '../assets/village.png';
 import Toon from '../assets/RicolaAvatarPlaceholder.png';
 import ReactPlayer from 'react-player';
 
-function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConstruction}) {
+function Hero({buttonData, displayCardsSection, displayUnderConstruction}) {
 
     let [opacity, setOpacity] = useState("0%")
     let [display, setDisplay] = useState( "none" )
     let [playing, setPlaying] = useState( false )
+
+    let [toggleMountain, setToggleMountain] = useState("+");
+
+    const togglerMountain = () => {
+        setToggleMountain(prev => !prev)
+    }
 
     const videoToggler = () => {
         setOpacity(prev => !prev)
@@ -34,6 +39,8 @@ function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConst
                      category={item.name}
                     displayCardsSection={displayCardsSection}
                     displayUnderConstruction={displayUnderConstruction}
+                    toggle={toggleMountain}
+                    toggler={togglerMountain}
                     />
                 ))}
                 <img src={Ground} alt="Ricola world ground" className='ground' style={{zIndex:'2'}}/>
@@ -42,7 +49,7 @@ function Hero({buttonData, hide, setHide, displayCardsSection, displayUnderConst
                 <img src={Farm} style={{zIndex:'2'}} alt="A rendering of a farm" className='farm' onClick={displayUnderConstruction}/>
                 <img src={Factory} style={{zIndex:'2'}} alt="A rendering of the Ricola factory" className='factory' onClick={displayUnderConstruction}/>
                 <img src={Mountain} style={{zIndex:'2'}} alt="Ricola world Mountain, its so impressive" className='Mountain'
-                    onClick={displayCardsSection}/>
+                    onClick={displayCardsSection} onMouseOver={togglerMountain}/>
                 <img src={RightCloud} alt="A cloud in the sky" className="RightCloud"/>
                 <img src={LeftCloudBig} alt="A cloud in the sky" className="LeftCloudBig"/>
                 <img src={LeftCloudSmall} alt="A cloud in the sky" className="LeftCloudSmall"/>       

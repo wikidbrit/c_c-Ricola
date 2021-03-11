@@ -80,15 +80,7 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
                 )}
                 </Popup>
                 
-                
-                {/* <Modal 
-                    showModal={showModal}
-                    description={description}
-                    footstep={footstep}
-                    toggler={toggler}
-                    h3={h3}
-                    sdgCollection={sdgCollection}
-                /> */}
+            
                 </div>
                 </ReactCardFlip>
                 
