@@ -4,7 +4,7 @@ import Modal from './modal.js';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 
 
-const Card = ({ footstep, h3, image, style, extract, description, sdgCollection }) => {
+const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollection }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     
     const handleClick = (event) => {
@@ -58,6 +58,7 @@ const Card = ({ footstep, h3, image, style, extract, description, sdgCollection 
                 footstep={footstep}
                 toggler={toggler}
                 h3={h3}
+                h2={h2}
                 sdgCollection={sdgCollection}
             />
         </div>

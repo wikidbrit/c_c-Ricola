@@ -531,8 +531,15 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
      padding: 1vw;
  }
 
+ .card span{
+    color: var(--green);
+    cursor: default;
+    font-size: 20px;
+    margin-right: 5px;
+    font-weight: 600;
+}
 
-.card span{
+ .react-card-front span{
     color: var(--white);
     cursor: default;
     font-size: 40px;
@@ -549,6 +556,16 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     color: var(--green);
 
 }
+
+.card p{
+    font-family: Frutiger;
+    line-height: 1.4;
+    font-size: 14px;
+    padding:0 0.5vw;
+    color:var(--green);
+}
+
+
 .react-card-front #card4, .react-card-front #card6 , .react-card-front #card8 , .react-card-front #card9 {
     display: flex;
 }
@@ -557,38 +574,58 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     color:var(--green);
 }
 
-
 #card4 h3, #card9 h3, #card8 h3, #card4 span, #card8 span, #card9 span{
     align-self: flex-end;
 }
-
-
  #readMore{
-     margin-top: 3vh;
+    margin-top: 3vh;
     color: var(--green);
  }
-
-
  #readMore:hover{
     opacity:80%;
     cursor: pointer;
  }
 
- .modal{
-     width:100%;
-     height:100%;
-     background-color: var(--green);
-     font-size: 16px;
-     position: absolute;
-     top:0;
-     left:0;
-     overflow:auto;
-     /* z-index: 100 !important; */
- }
- .modal img{
-     margin-right:10px;
- }
 
+/* MODAL */
+.modal{
+   width:90%;
+   height:90%;
+   background-color: var(--white);
+   box-shadow: var(--lightYellow);
+   position: absolute;
+   top:0;
+   left:0;
+   overflow:auto;
+   padding:1vw;
+}
+
+/* #07806A; */
+
+.modal h2{
+    font-size: 16px;
+    color:var(--green);
+    font-family: Frutiger;
+    padding:1vw;
+}
+
+.modal p{
+    margin-top:1vh;
+}
+.sdgs{
+    padding:0 0 0 1vw;
+}
+.modal img{
+    margin-right:5px;
+}
+
+.close{
+    position: fixed;
+    top:5px;
+    right:5px;
+}
+
+/* SHOW HIDE */
  .display-none{
      display:none
  }

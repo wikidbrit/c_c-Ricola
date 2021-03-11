@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import './landing.css';
-import plus from '../assets/plus.svg';
 
 
 const HeroButton = ({category, displayCardsSection, displayUnderConstruction}) => {
-
-
     let [toggle, setToggle] = useState("+");
-    // let [toggle2, setToggle2] = useState('hide');
 
     const toggler = () => {
         setToggle(prev => !prev)
-        // setToggle2(prev => !prev)
     }
 
     if(category==="Nature"){
@@ -28,16 +23,7 @@ const HeroButton = ({category, displayCardsSection, displayUnderConstruction}) =
                 <span >{toggle ? "+" : `${category}`}</span>
             </div>
         );
-    }
-
-   
+    }   
 }
 
 export default HeroButton;
-
-//if you want to change the state you need to pass in functions
-//on click functions -> button expands
-
-
-
-// `${classNames} ${toggle}`
