@@ -101,18 +101,19 @@ body{
     grid-row: 1/2;
     width:40%;
     z-index: 3;
-    animation: lMove2 10s ease-in-out infinite;
     justify-self: center;
 }
 
 .LeftCloudSmall{
     grid-column: 2/4;
     transform: translateY(50%);
+    animation: lMove1 10s ease-in-out infinite;
 }
 
 .LeftCloudBig{
     grid-column: 3/5;
     transform: translateY(20%); 
+    animation: lMove2 10s ease-in-out infinite;
 }
 
 .RightCloud{
@@ -148,13 +149,13 @@ body{
 
 @keyframes lMove1 {
     0%{
-        transform: translateY(50%);
+        transform: translateY(45%);
     }
-    50%{
-        transform: translateY(35%);
+    60%{
+        transform: translateY(30%);
     }
     100% {
-        transform: translateY(50%);
+        transform: translateY(45%);
     }
 }
 
@@ -369,26 +370,6 @@ body{
 #x-Ricola{
     grid-column: 6/9;
     transform: translateY(-250%);
-}
-
-/* .natureTextWrapper {
-    grid-row:1/2;
-    grid-column:3/5;
-    transition: all 0.5s ease-in-out;
-    z-index:1;
-    align-self: center;
-    transform: translateY(-50%);
-    opacity:1%;
-}
-
-.natureText {
-    opacity:80%;
-    max-width:70%;
-    height:auto;
-} */
-
-.Mountain:hover ~ .natureTextWrapper {
-    opacity:100%;
 }
 
 #Nature:hover ~ .Mountain, #Business:hover ~ .farm, #People:hover ~ .village, #x-Ricola:hover ~ .factory  {
