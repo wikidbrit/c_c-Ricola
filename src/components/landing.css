@@ -469,7 +469,7 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
  }
  .card{
      color:var(--green);
-
+     border-radius: 20px;
  }
 
  .card p{
@@ -526,9 +526,11 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 }
 #card3 .cardHeading{
     background-color: var(--green);
+    border-radius: 20px 20px 0 0;
 }
 #card9 .cardHeading {
     background-color: var(--yellow);
+    border-radius: 0 0 20px 20px ;
 }
 #card4 span, #card4 h3, #card8 span, #card8 h3, #card9 span, #card9 h3, #card10 span, #card10 h3{
     color:var(--green);
@@ -616,11 +618,12 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     font-family: Frutiger;
     font-size:14px;
     color: var(--green);
-    background: #f1f1dd;
+    background: var(--white);
     padding: 70px;
     -webkit-column-count: 2;
     column-count: 2;
     margin: 0 auto;
+    border-radius: 20px;
     -webkit-transform: translate(0, -150%);
        -moz-transform: translate(0, -150%);
         -ms-transform: translate(0, -150%);
