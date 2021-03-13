@@ -55,7 +55,6 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
                 <button
                 className="close"
                 onClick={() => {
-                    console.log('modal closed ');
                     close();
                 }}
                 >x</button>
@@ -63,11 +62,12 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
                 <h4>{h3}</h4>
                 
                 <h2>{h2}</h2>
+                <div className="horizontalRule hr cardRuler"></div>
                 <p>{documentToReactComponents(description.json)}</p>
                 
                 <div className="sdgs">
                 {sdgCollection.map((item) => (
-                    <img src={item.url} alt="sdg" width="60px"/>
+                    <img src={item.url} alt="sdg" width="50vw"/>
                 ))}
                 </div>
                 </div>
