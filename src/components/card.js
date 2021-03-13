@@ -27,8 +27,10 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
             position:'static'
         }}
         >
+        <div className="cardHeading">
             <span>{footstep}</span>
             <h3>{h3}</h3>
+        </div>
         </div>
         
         
@@ -41,8 +43,10 @@ const Card = ({ footstep, h2, h3, image, style, extract, description, sdgCollect
             height: "100%",
         }}
         >
-        <span>{footstep} </span>
-        <h4>{h3}</h4>
+        <div className="cardHeadingBack">
+            <span>{footstep}</span>
+            <h4>{h3}</h4>
+        </div>
         <p>{documentToReactComponents(extract.json)}</p>
         
         <Popup trigger={<button id="readMore">Read more</button>}>

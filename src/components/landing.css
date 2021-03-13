@@ -160,6 +160,7 @@ body{
 }
 
 .Mountain, .factory, .farm, .village{
+    display: inline-block;
     grid-row: 1/2;
     transition: 100ms ease-in-out;
     cursor: pointer;
@@ -468,7 +469,7 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
  }
  .card{
      color:var(--green);
-
+     border-radius: 20px;
  }
 
  .card p{
@@ -478,105 +479,82 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
  }
 
 .card span{
-    font-family: Frutiger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--white);
     cursor: default;
     font-size: 40px;
+    font-size: 3vw;
     padding-left: 10px;
     padding-right: 20px;
     font-weight: bold;
 }
 /* FRONT CARD */
-
-/* card heading */
-
-.card h3{
-    font-family: Frutiger;
-    font-weight: 600;
-    font-size: 22px;
-    font-size: 1.5vw;
-    color:var(--white);
-    display: inline-block;
-    text-align: center;
-    margin:0 auto;
-}
-
 .react-card-front .card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    
+    grid-template-rows: repeat(4, 1fr); 
 }
 
-#card2 h3, #card4 h3, #card6 h3, #card8 h3, #card10 h3{
-   grid-column: 1/4;
-   grid-row: 3/4;
-   align-self: flex-end;
-}
- #card2 span, #card4 span, #card6 span, #card8 span, #card10 span{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    align-self: flex-start;
- }
-
- #card1 span, #card3 span, #card5 span, #card7 span, #card9 span{
-    grid-column: 1/4;
-   grid-row: 3/4;
-   align-self: flex-end;
-}
-#card1 h3, #card3 h3, #card5 h3, #card7 h3, #card9 h3{
-    grid-column: 1/4;
-    grid-row: 1/2;
-    padding-top:10px;
- }
-
- #card2 h3, #card10 h3{
-     background-color: var(--yellow);
-     width:100%;
-     padding: 10px 0;
-     color:var(--green);
- }
-
- #card2 span, #card10 span{
-    color:var(--green);
-}
-
- #card3 h3 {
-    background-color: var(--green);
+/* card heading */
+.card .cardHeading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
+    color:var(--white);
     width:100%;
-    padding: 10px 0;
-    max-height: 30px;
+}
+.card h3{
+    display: inline-block;
+    padding:10px 0;
+}
+#card3 h3, #card4 h3, #card5 h3, #card9 h3{
+    vertical-align: middle;
 }
 
-#card5 h3, #card9 h3 {
+.card span{
+    padding: 15px;
+    padding: 1vw;
+}
+
+#card1 .cardHeading, #card3 .cardHeading, #card5 .cardHeading, #card6 .cardHeading, #card7 .cardHeading, #card8 .cardHeading, #card10 .cardHeading{
+    grid-column: 1/4;
+    grid-row: 1/2;  
+ }
+#card2 .cardHeading, #card4 .cardHeading, #card9 .cardHeading{
+    grid-column: 1/4;
+    grid-row: 4/5;
+    align-self: flex-end;
+}
+#card3 .cardHeading{
+    background-color: var(--green);
+    border-radius: 20px 20px 0 0;
+}
+#card9 .cardHeading {
     background-color: var(--yellow);
-    color:var(--green);
-    width:100%;
-    padding: 10px 0;
-    max-height: 30px;
+    border-radius: 0 0 20px 20px ;
 }
-
-#card6 span, #card8 span{
+#card4 span, #card4 h3, #card8 span, #card8 h3, #card9 span, #card9 h3, #card10 span, #card10 h3{
     color:var(--green);
 }
-
-#card6 h3, #card8 h3 {
-    background-color: var(--green);
-    width:100%;
-    padding: 10px 0;
+ #card2 h3,  #card3 h3, #card10 h3, #card4 h3{
+     max-width: 200px;
+     font-size: 24px;
+    font-size: 1.5vw;
+}
+#card10 h3{
+    max-width: 400px;
 }
 
-#card4 span, #card4 h3{
-    color:var(--green);
+#card5 h3{
+    max-width: 400px;
 }
-#card4 h3{
-    padding-bottom: 10px;
+#card8 h3, #card9 h3{
+    max-width: 200px;
 }
 
 /* backside card heading */
 .react-card-back span{
     color:var(--green);
-    padding: 0px 10px;
+    padding: 0 10px 0 30px;
 }
 .react-card-back h4{
     display: inline;
@@ -585,8 +563,12 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     font-size: 1.3vw;
 }
 
+.cardHeadingBack{
+    padding-top: 15px;
+}
+
 .react-card-back p{
-    padding: 15px;
+    padding: 10px 15px;
 }
 
 
@@ -598,7 +580,6 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
 }
  
 /* POPUP */
-
 #readMore{
     /* margin-top: 3vh; */
     color: var(--green);
@@ -607,8 +588,10 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     outline: none;
     font-weight: bold;
     position: absolute;
-    bottom:10px;
-    padding:0 30px 20px 30px;
+    bottom: 20px;
+    padding:0 30px 0 30px;
+    font-size: 16px;
+    font-size: 1vw;
 }
 
 #readMore:hover{
@@ -635,11 +618,12 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     font-family: Frutiger;
     font-size:14px;
     color: var(--green);
-    background: #f1f1dd;
+    background: var(--white);
     padding: 70px;
     -webkit-column-count: 2;
     column-count: 2;
     margin: 0 auto;
+    border-radius: 20px;
     -webkit-transform: translate(0, -150%);
        -moz-transform: translate(0, -150%);
         -ms-transform: translate(0, -150%);
@@ -661,14 +645,21 @@ filter: drop-shadow(0px 0px 7px rgba(0, 230, 251, 0.649))
     margin-bottom: 15px;
  }
  .popup-content span{
+     font-family: Georgia, 'Times New Roman', Times, serif;
      font-size: 32px;
      font-weight: bold;
     margin-right:10px;
+ }
+ .modal h4{
+     max-width: 320px;
  }
 
  .popup-content h2{
     font-size: 16px;
     margin-bottom: 15px;
+ }
+ #popup-182 h4{
+    vertical-align: middle;
  }
  
  .popup-content p{
